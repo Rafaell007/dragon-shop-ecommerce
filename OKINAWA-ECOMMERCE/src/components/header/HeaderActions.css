@@ -1,0 +1,84 @@
+
+.header-actions {
+    display:flex;
+    gap: 20px;
+}
+
+.header-actions a:hover{
+    color: #000;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.header-actions a{
+    font-size: 20px;
+    color: #000;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    padding: 7px;
+}
+
+.header-actions-wishlist{
+    position: relative;
+}
+.wishlist-dropdown{
+    display: none;
+    flex-direction:column;
+    position: absolute;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 160px;
+    background-color: #fff;
+    padding: 20px 10px;  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-dropdown::before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.wishlist-dropdown p{
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+}
+
+.wishlist-dropdown button{
+    background-color: #E8A317;
+    border-radius: 8px;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.header-actions-wishlist:hover .wishlist-dropdown{
+    display:flex;
+}
+
+@media (max-width: 980px) {
+    .header-actions {
+        gap: 5px;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .header-actions {
+        gap: 10px;
+    }
+    .header-actions a {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
