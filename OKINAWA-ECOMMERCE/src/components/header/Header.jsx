@@ -19,8 +19,6 @@ export function Header() {
                 </div>
                 <HeaderNavigation />
                 <HeaderActions />
-          
-              
             </div>
         </>
     )
