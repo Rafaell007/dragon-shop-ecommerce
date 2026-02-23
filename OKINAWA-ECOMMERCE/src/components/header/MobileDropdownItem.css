@@ -1,0 +1,28 @@
+.dropdown-item-content{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.dropdown-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.dropdown-submenu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    list-style: none;
+    padding-top: 10px ;
+    background-color: #f5f5f5;
+}
+.dropdown-submenu a{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 10px;
+}

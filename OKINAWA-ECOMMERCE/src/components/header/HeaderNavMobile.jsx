@@ -1,45 +1,105 @@
-import {useState} from 'react';
+import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import "./HeaderNavMobile.css";
+import { BsHeart } from "react-icons/bs";
+import {MobileDropdownItem} from "./MobileDropdownItem.jsx";
 
 export function HeaderNavMobile() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <>
-          <div className="header-nav-mobile">
-           
+  return (
+    <>
+      <div className="header-nav-mobile">
+        <button
+          className="header-nav-mobile-button"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Open mobile menu"
+        >
+          <BsList />
+        </button>
+        {isOpen && (
+          <div
+            onClick={() => setIsOpen(false)}
+            className="mobile-sidebar-overlay"
+          >
+            <aside
+            onClick={(e)=> e.stopPropagation()}
+            className="mobile-sidebar">
+              <div className="mobile-sidebar-close">
                 <button
-                className="header-nav-mobile-button"
-                onClick={()=> setIsOpen(!isOpen)}
-                aria-label="Open mobile menu"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Close mobile menu"
                 >
-                    <BsList />
+                  X
                 </button>
-                {isOpen && (
-                    <div
-                    onClick={()=> setIsOpen(false)}
-                    className='mobile-sidebar-overlay'>
-                        <aside className= 'mobile-sidebar'>
-                            <div className='mobile-sidebar-close'></div>
-                            <div className='mobile-sidebar-content'>
-                                <ul className='mobile-sidebar-list'>
-                                    <li><a href="">New in</a></li>
-                                    <li><a href="">Flash sale</a></li>
-                                    <li><a href="">Best sellers</a></li>
-                                    <li><a href="">Men</a></li>
-                                    <li><a href="">Women</a></li>
-                                    <li><a href="">Kids</a></li>
-                                </ul>
-
-                            </div>
-                        </aside>
-                      
-                    </div>
-                )}
-            </div>
-            
-      
-        </>
-    )
+              </div>
+              <div className="mobile-sidebar-content">
+                <ul className="mobile-sidebar-list">
+                  <li>
+                    <a href="">New in</a>
+                  </li>
+                  <li>
+                    <a href="">Flash sale</a>
+                  </li>
+                  <li>
+                    <a href="">Best sellers</a>
+                  </li>
+                  
+                  <MobileDropdownItem label = "Men">
+                    <li><a href="">T-shirts</a></li>
+                    <li><a href="">Shirts</a></li>
+                    <li><a href="">Jeans</a></li>
+                    <li><a href="">Jackets</a></li>
+                    <li><a href="">Shoes</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Watches</a></li>
+                    <li><a href="">Bags</a></li>
+                  </MobileDropdownItem>
+                  <MobileDropdownItem label = "Women">
+                    <li><a href="">T-shirts</a></li>
+                    <li><a href="">Shirts</a></li>
+                    <li><a href="">Jeans</a></li>
+                    <li><a href="">Jackets</a></li>
+                    <li><a href="">Shoes</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Watches</a></li>
+                    <li><a href="">Bags</a></li>
+                  </MobileDropdownItem>
+                  <MobileDropdownItem label = "Kids">
+                    <li><a href="">T-shirts</a></li>
+                    <li><a href="">Shirts</a></li>
+                    <li><a href="">Jeans</a></li>
+                    <li><a href="">Jackets</a></li>
+                    <li><a href="">Shoes</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Watches</a></li>
+                    <li><a href="">Bags</a></li>
+                  </MobileDropdownItem>
+                  <MobileDropdownItem label = "T-shirts">
+                    <li><a href="">men</a></li>
+                    <li><a href="">women</a></li>
+                  </MobileDropdownItem>
+                  <li>
+                    <a href="">shirts</a>{" "}
+                  </li>
+                  <li>
+                    <a href="">clothing</a>
+                  </li>
+                  <li>
+                    <a href="">accessory</a>
+                  </li>
+                </ul>
+                <div className="mobile-sidebar-wishlist">
+                  <a href="">
+                    <BsHeart />
+                  </a>
+                  <a href="">wishlist</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        )}
+      </div>
+    </>
+  );
 }
