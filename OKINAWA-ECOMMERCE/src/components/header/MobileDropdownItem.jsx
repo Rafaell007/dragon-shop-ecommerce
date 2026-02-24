@@ -1,7 +1,7 @@
 import { BsChevronDown, BsDash } from "react-icons/bs";
 import { useState } from "react";
 import "./MobileDropdownItem.css";
-
+import { motion, AnimatePresence } from "motion/react";
 export function MobileDropdownItem({label, children}) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +17,18 @@ export function MobileDropdownItem({label, children}) {
         {isOpen ? <BsDash /> : <BsChevronDown />}
       </button>
       </div>
-      {isOpen && <ul className="dropdown-submenu">{children}</ul>}
+      <AnimatePresence>
+      {isOpen && <motion.div
+      className="dropdown-submenu-wrapper"
+      initial={{ height: 0 }}
+      animate={{ height: "auto" }}
+      exit={{ height: 0 }}
+      transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+     
+      >
+        <ul className="dropdown-submenu">{children}</ul>
+      </motion.div>}
+      </AnimatePresence>
     </li>
   );
 }

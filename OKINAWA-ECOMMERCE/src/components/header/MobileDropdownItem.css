@@ -2,7 +2,12 @@
     display: flex;
     justify-content: space-between;
     
+    
 }
+.dropdown-item{
+    overflow: hidden;
+}
+
 .dropdown-button{
     background-color: transparent;
     border: none;
@@ -20,6 +25,7 @@
     list-style: none;
     padding-top: 10px ;
     background-color: #f5f5f5;
+    
 }
 .dropdown-submenu a{
     font-size: 12px;

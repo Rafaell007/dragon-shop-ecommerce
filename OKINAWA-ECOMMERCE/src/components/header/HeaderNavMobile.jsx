@@ -1,3 +1,4 @@
+import { AnimatePresence, motion} from "motion/react"
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import "./HeaderNavMobile.css";
@@ -17,14 +18,25 @@ export function HeaderNavMobile() {
         >
           <BsList />
         </button>
+
+        <AnimatePresence>
         {isOpen && (
-          <div
-            onClick={() => setIsOpen(false)}
+          <motion.div
             className="mobile-sidebar-overlay"
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 0}}
+            transition={{ duration: 0.3}}
+            onClick={() => setIsOpen(false)}
           >
-            <aside
+            <motion.aside
+            initial={{ x: '-100%'}}
+            animate={{ x: '0%'}}
+            exit={{ x: '-100%'}}
+            transition={{ duration: 0.3, ease: "easeInOut"}}
+            className="mobile-sidebar"
             onClick={(e)=> e.stopPropagation()}
-            className="mobile-sidebar">
+            >
               <div className="mobile-sidebar-close">
                 <button
                   onClick={() => setIsOpen(false)}
@@ -96,9 +108,11 @@ export function HeaderNavMobile() {
                   <a href="">wishlist</a>
                 </div>
               </div>
-            </aside>
-          </div>
+            </motion.aside>
+          </motion.div>
         )}
+        </AnimatePresence>
+
       </div>
     </>
   );
