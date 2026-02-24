@@ -1,8 +1,6 @@
 .dropdown-item-content{
     display: flex;
-    justify-content: space-between;
-    
-    
+    justify-content: space-between; 
 }
 .dropdown-item{
     overflow: hidden;

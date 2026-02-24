@@ -101,14 +101,15 @@ export function HeaderNavMobile() {
                     <a href="">accessory</a>
                   </li>
                 </ul>
-                <div className="mobile-sidebar-wishlist">
+              </div>
+              <div className="mobile-sidebar-wishlist">
                   <a href="">
                     <BsHeart />
                   </a>
                   <a href="">wishlist</a>
                 </div>
-              </div>
             </motion.aside>
+            
           </motion.div>
         )}
         </AnimatePresence>
