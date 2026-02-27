@@ -1,0 +1,104 @@
+
+@font-face {
+    font-family: 'Horizon';
+    src: url('../../assets/fonts/HorizoneSurvivePersonalUseOnly-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.hero-banner-container {
+    position: relative;
+    height: 95vh;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+
+}
+.hero-banner-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.hero-banner-content {
+    position: absolute;
+   bottom: 10%;
+   right: 5%;
+   max-width: 1920px;
+ 
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+.hero-banner-content-text h1 {
+    font-size: 100px;
+    color: #fff;
+    font-family: 'Horizon', sans-serif;
+}
+.hero-banner-content-text p {
+    font-size: 20px;
+    color: #fff;
+
+}
+.hero-banner-content button {
+    background-color: black;
+    color: white;
+    padding: 30px 110px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    .hero-banner-content {
+        left: 0;
+        right: 0;
+        bottom: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-banner-content-text  {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+@media (max-width: 980px) {
+    .hero-banner-content {
+        left: 0;
+        right: 0;
+        bottom: 5%;
+    }
+    .hero-banner-content-text h1 {
+        font-size: 48px;
+    }
+    .hero-banner-content-text p {
+        font-size: 16px;
+    }
+    .hero-banner-content button {
+        padding: 20px 80px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    .hero-banner-content-text h1 {
+        font-size: 32px;
+    }
+    .hero-banner-content-text p {
+        font-size: 14px;
+    }
+    .hero-banner-content button {
+        padding: 16px 48px;
+        font-size: 13px;
+    }
+}

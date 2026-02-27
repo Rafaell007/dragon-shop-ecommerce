@@ -1,5 +1,5 @@
 import { AnimatePresence, motion} from "motion/react"
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { BsList } from "react-icons/bs";
 import "./HeaderNavMobile.css";
 import { BsHeart } from "react-icons/bs";
@@ -8,7 +8,17 @@ import {MobileDropdownItem} from "./MobileDropdownItem.jsx";
 export function HeaderNavMobile() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(()=>{
+    isOpen
+    ? document.body.style.overflow = "hidden"
+     : document.body.style.overflow = "";
+    
+   }, [isOpen]);
+
   return (
+   
+
+
     <>
       <div className="header-nav-mobile">
         <button
