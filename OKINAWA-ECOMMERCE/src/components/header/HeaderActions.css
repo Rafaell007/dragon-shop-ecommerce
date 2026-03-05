@@ -67,6 +67,29 @@
     display:flex;
 }
 
+
+
+.header-actions-cart{
+    position: relative;
+}
+.header-actions-cart .cart-count{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    padding: 1px;
+    color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 16px;
+    
+    
+}
+
 @media (max-width: 980px) {
     .header-actions {
         gap: 5px;
