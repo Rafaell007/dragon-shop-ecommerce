@@ -1,15 +1,9 @@
-import { BsSearch, BsHeart, BsPerson, BsCart } from "react-icons/bs";
+import { BsSearch, BsHeart, BsPerson } from "react-icons/bs";
 import "./HeaderActions.css";
+import { CheckoutCartButton } from "../pages/checkout/Checkout.jsx";
 
-export function HeaderActions({cartProducts}) {
+export function HeaderActions({ cartProducts }) {
 
-  let totalQuantity = 0;
-
-  cartProducts.forEach((cartItem)=>{
-    totalQuantity += cartItem.quantity;
-    console.log(cartProducts);
-    
-  })
 
   return (
     <>
@@ -34,15 +28,7 @@ export function HeaderActions({cartProducts}) {
             <BsPerson />
           </a>
         </div>
-        <div className="header-actions-cart">
-          <a href="">
-            <BsCart />
-          </a>
-          
-          <div className="cart-count">
-            <span>{totalQuantity}</span> 
-          </div>
-        </div>
+        <CheckoutCartButton cartProducts={cartProducts} />
       </div>
     </>
   );
