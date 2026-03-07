@@ -1,11 +1,16 @@
 import { mockProducts } from "../../../data/mockProducts";
 import "./ProductsGrid.css";
+import { useCart } from "../../../context/CartContext";
 
 
 
 
 
 export function ProductsGrid() {
+
+  const {addToCart} = useCart();
+
+
     return(
         <>
         <div className="products-grid-container">
@@ -19,7 +24,7 @@ export function ProductsGrid() {
                             <p>{product.name}</p>
                         </div>
                         <div className="product-price-container">
-                            <p>${product.priceCents / 100}</p>
+                            <p>${(product.priceCents / 100).toFixed(2)}</p>
                         </div>
                         <div className="product-quantity-container">
                             <select name="" id="">
@@ -35,7 +40,7 @@ export function ProductsGrid() {
                                 <option value="10">10</option>
                             </select>
                         </div>
-                        <button className="add-to-cart-button">Add to Cart</button>
+                        <button onClick={()=>addToCart(product)}className="add-to-cart-button">Add to Cart</button>
                     </div>
                 )
             })}

@@ -1,7 +1,16 @@
 import { BsSearch, BsHeart, BsPerson, BsCart } from "react-icons/bs";
 import "./HeaderActions.css";
 
-export function HeaderActions() {
+export function HeaderActions({cartProducts}) {
+
+  let totalQuantity = 0;
+
+  cartProducts.forEach((cartItem)=>{
+    totalQuantity += cartItem.quantity;
+    console.log(cartProducts);
+    
+  })
+
   return (
     <>
       <div className="header-actions">
@@ -31,11 +40,7 @@ export function HeaderActions() {
           </a>
           
           <div className="cart-count">
-            <span>0</span> {/*here will b guard operator with conditioner cartCount > 0 && (
-              <div className="cart-count">
-                <span>{cartCount}</span>
-              </div>
-            ) */}
+            <span>{totalQuantity}</span> 
           </div>
         </div>
       </div>

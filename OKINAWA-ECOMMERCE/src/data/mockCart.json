@@ -1,0 +1,23 @@
+[
+    {
+        "id": "a1b2c3d4-1111-4000-a000-000000000001",
+        "name": "Red Joggers Premium",
+        "image": "redJoggers",
+        "deliveryOptionId": 1,
+        "quantity": 2
+    },
+    {
+        "id": "a1b2c3d4-2222-4000-a000-000000000002",
+        "name": "Gray Classic Hoodie",
+        "image": "grayHoodie",
+        "deliveryOptionId": 2,
+        "quantity": 1
+    },
+    {
+        "id": "a1b2c3d4-3333-4000-a000-000000000003",
+        "name": "Light Blue Baseball Cap",
+        "image": "lightBlueCap",
+        "deliveryOptionId": 3,
+        "quantity": 1
+    }
+]

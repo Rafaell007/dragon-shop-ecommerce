@@ -1,15 +1,15 @@
-
-import { Routes, Route } from 'react-router'
-import './App.css'
-import { HomePage } from './components/pages/home/HomePage'
+import { Routes, Route } from "react-router";
+import "./App.css";
+import { HomePage } from "./components/pages/home/HomePage";
+import { CartProvider } from "./context/CartContext";
 function App() {
-
   return (
-       <Routes>
-        <Route index element= {<HomePage />} />
-
-       </Routes>
-  )
+    <CartProvider>
+      <Routes>
+        <Route index element={<HomePage />} />
+      </Routes>
+    </CartProvider>
+  );
 }
 
-export default App
+export default App;

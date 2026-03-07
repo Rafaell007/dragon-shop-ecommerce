@@ -3,10 +3,14 @@ import {HeaderActions} from "./HeaderActions.jsx";
 import "./Header.css";
 import okinawaLogo from "../../assets/images/header/okinawa-logo.webp";
 import { HeaderNavMobile } from "./HeaderNavMobile.jsx";
+import { useCart } from "../../context/CartContext";
 
 
 
 export function Header() {
+
+    const {cartProducts} = useCart();
+
     return (
         <>
             <div className="free-shipping-banner">
@@ -18,7 +22,7 @@ export function Header() {
                     <img src={okinawaLogo} alt="okinawa logo" />
                 </div>
                 <HeaderNavigation />
-                <HeaderActions />
+                <HeaderActions cartProducts = {cartProducts} />
             </div>
         </>
     )
