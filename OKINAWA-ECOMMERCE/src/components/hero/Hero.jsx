@@ -11,9 +11,9 @@ export function Hero() {
                 <h1>FEEL THE SPRING!</h1>
                 <p>Discover the latest trends in Okinawa Shop now.</p>
                 </div>
-                <div className="call-to-action-button">
-                    <button>Shop Now</button>
-                </div>
+               
+                    <button className="call-to-action-button" >Shop Now</button>
+                
             </div> 
         </div>
         </>
