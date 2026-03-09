@@ -16,7 +16,7 @@ export function ProductsGrid() {
         <div className="products-grid-container">
             {mockProducts.map((product)=>{
                 return(
-                    <div className="product-container">
+                    <div key={product.id} className="product-container">
                         <div className="product-image-container">
                             <img src={product.image} alt={product.name} />
                         </div>

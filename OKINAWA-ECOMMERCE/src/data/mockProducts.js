@@ -16,6 +16,8 @@ export const mockProducts = [
     image: redJoggers,
     priceCents: 3490,
     category: "pants",
+    color: "Red",
+    size: "M",
   },
   {
     id: "a1b2c3d4-2222-4000-a000-000000000002",
@@ -23,6 +25,8 @@ export const mockProducts = [
     image: grayHoodie,
     priceCents: 5990,
     category: "hoodies",
+    color: "Gray",
+    size: "L",
   },
   {
     id: "a1b2c3d4-3333-4000-a000-000000000003",
@@ -30,6 +34,8 @@ export const mockProducts = [
     image: lightBlueCap,
     priceCents: 1290,
     category: "caps",
+    color: "Light Blue",
+    size: "One Size",
   },
   {
     id: "a1b2c3d4-4444-4000-a000-000000000004",
@@ -37,6 +43,8 @@ export const mockProducts = [
     image: restApiTee,
     priceCents: 2490,
     category: "tshirts",
+    color: "White",
+    size: "M",
   },
   {
     id: "a1b2c3d4-5555-4000-a000-000000000005",
@@ -44,6 +52,8 @@ export const mockProducts = [
     image: whiteHoodie,
     priceCents: 6490,
     category: "hoodies",
+    color: "White",
+    size: "XL",
   },
   {
     id: "a1b2c3d4-6666-4000-a000-000000000006",
@@ -51,6 +61,8 @@ export const mockProducts = [
     image: blackHoodie,
     priceCents: 5990,
     category: "hoodies",
+    color: "Black",
+    size: "L",
   },
   {
     id: "a1b2c3d4-7777-4000-a000-000000000007",
@@ -58,6 +70,8 @@ export const mockProducts = [
     image: apiNerdTee,
     priceCents: 1990,
     category: "tshirts",
+    color: "White",
+    size: "S",
   },
   {
     id: "a1b2c3d4-8888-4000-a000-000000000008",
@@ -65,6 +79,8 @@ export const mockProducts = [
     image: springBootTee,
     priceCents: 2290,
     category: "tshirts",
+    color: "Black",
+    size: "M",
   },
   {
     id: "a1b2c3d4-9999-4000-a000-000000000009",
@@ -72,6 +88,8 @@ export const mockProducts = [
     image: navyCap,
     priceCents: 1490,
     category: "caps",
+    color: "Navy Blue",
+    size: "One Size",
   },
   {
     id: "a1b2c3d4-aaaa-4000-a000-000000000010",
@@ -79,5 +97,7 @@ export const mockProducts = [
     image: eBike,
     priceCents: 249900,
     category: "sport",
+    color: "Orange",
+    size: "One Size",
   },
 ];
