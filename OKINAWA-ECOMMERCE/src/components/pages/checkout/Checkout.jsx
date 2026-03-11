@@ -5,14 +5,13 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { CartHeaderContent } from "./CartHeaderContent.jsx";
 import { CartProductsList } from "./CartProductsList.jsx";
+import { CartPaymentSummary } from "./CartPaymentSummary.jsx";
 
 
 
 export function CheckoutCartButton({ cartProducts }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(cartProducts);
   
-
   useEffect(() => {
     isOpen
       ? (document.body.style.overflow = "hidden")
@@ -57,10 +56,12 @@ export function CheckoutCartButton({ cartProducts }) {
               className="cart-sidebar"
               onClick={(e) => e.stopPropagation()}
             >
+               <CartHeaderContent cartProducts={cartProducts} setIsOpen={setIsOpen} />
               <div className="cart-sidebar-content">
-                <CartHeaderContent cartProducts={cartProducts} />
-                <CartProductsList cartProducts={cartProducts} />
+               
+                <CartProductsList cartProducts={cartProducts} setIsOpen={setIsOpen} />
               </div>
+              <CartPaymentSummary cartProducts={cartProducts} />
             </motion.aside>
           </motion.div>
         )}

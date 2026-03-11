@@ -2,7 +2,7 @@ import { LiaShippingFastSolid } from "react-icons/lia";
 import { motion } from "motion/react";
 import "./CartHeaderContent.css";
 
-export function CartHeaderContent({ cartProducts }) {
+export function CartHeaderContent({ cartProducts, setIsOpen }) {
   const FREE_SHIPPING_THRESHOLD = 200;
 
   let totalPrice = 0;
@@ -14,15 +14,18 @@ export function CartHeaderContent({ cartProducts }) {
   const progress = Math.min((totalPrice / FREE_SHIPPING_THRESHOLD) * 100, 100);
   const isFreeShipping = remaining === 0;
 
+  
+
   return (
+    
     <>
       <div className="cart-header-container">
         <div className="cart-header">
           <h2>Cart</h2>
           <div className="cart-sidebar-close">
             <button
-              onClick={() => setIsOpen(false)}
-              aria-label="Close mobile menu"
+            
+              aria-label="Close mobile menu"  onClick={() => setIsOpen(false)}
             >
               X
             </button>
