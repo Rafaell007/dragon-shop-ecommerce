@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useMemo } from "react";
 import initialCart from "../data/mockCart.json";
 
 const CartContext = createContext();
@@ -79,8 +79,12 @@ export function CartProvider({ children }) {
     setCartProducts((prevProducts) => prevProducts.filter((item) =>  item.id !== product.id));
   }
 
+  const totalPrice = useMemo(()=> {
+    return cartProducts.reduce((total, product)=> total + (product.priceCents/ 100) * product.quantity, 0)
+},[cartProducts])
+
   return (
-    <CartContext.Provider value={{ cartProducts, addToCart, removeFromCart, deleteFromCart }}>
+    <CartContext.Provider value={{ cartProducts, addToCart, removeFromCart, deleteFromCart, totalPrice }}>
       {children}
     </CartContext.Provider>
   );

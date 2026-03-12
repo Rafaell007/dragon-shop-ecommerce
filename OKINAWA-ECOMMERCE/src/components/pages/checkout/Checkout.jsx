@@ -56,12 +56,12 @@ export function CheckoutCartButton({ cartProducts }) {
               className="cart-sidebar"
               onClick={(e) => e.stopPropagation()}
             >
-               <CartHeaderContent cartProducts={cartProducts} setIsOpen={setIsOpen} />
+               <CartHeaderContent setIsOpen={setIsOpen} />
               <div className="cart-sidebar-content">
                
                 <CartProductsList cartProducts={cartProducts} setIsOpen={setIsOpen} />
               </div>
-              <CartPaymentSummary cartProducts={cartProducts} />
+              <CartPaymentSummary />
             </motion.aside>
           </motion.div>
         )}

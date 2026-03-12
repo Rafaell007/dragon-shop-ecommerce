@@ -1,14 +1,11 @@
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { motion } from "motion/react";
+import { useCart } from "../../../context/CartContext";
 import "./CartHeaderContent.css";
 
-export function CartHeaderContent({ cartProducts, setIsOpen }) {
+export function CartHeaderContent({ setIsOpen }) {
+  const { totalPrice } = useCart();
   const FREE_SHIPPING_THRESHOLD = 200;
-
-  let totalPrice = 0;
-  cartProducts.forEach((cartItem) => {
-    totalPrice += (cartItem.priceCents / 100) * cartItem.quantity;
-  });
 
   const remaining = Math.max(FREE_SHIPPING_THRESHOLD - totalPrice, 0);
   const progress = Math.min((totalPrice / FREE_SHIPPING_THRESHOLD) * 100, 100);

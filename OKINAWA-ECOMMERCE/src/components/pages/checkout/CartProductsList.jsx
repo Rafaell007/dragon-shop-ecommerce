@@ -36,7 +36,7 @@ export function CartProductsList({ cartProducts, setIsOpen}) {
                   <b>Size:</b> {cartProduct.size}
                 </p>
                 <p className="product-price">
-                  {cartProduct.priceCents / 100} $
+                  {cartProduct.priceCents / 100} USD
                 </p>
                 <div className="product-quantity-container">
                   <div className="product-quantity-buttons">
