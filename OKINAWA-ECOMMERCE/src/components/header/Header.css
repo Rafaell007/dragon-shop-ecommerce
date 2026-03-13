@@ -13,11 +13,24 @@
 }
 
 .header-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 30px;
     
+}
+
+.header-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+
+
 }
 
 
