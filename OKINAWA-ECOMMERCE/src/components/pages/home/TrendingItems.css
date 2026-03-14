@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('../../assets/fonts/HorizoneSurvivePersonalUseOnly-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.categories-container {
+    padding: 20px 30px;
+    max-width: 1600px;
+    margin: 0 auto;
+    
+}
+
+
+.trending-items-container h2 {
+    font-family: 'Horizon', sans-serif;
+    font-size: 47px;
+
+}
+
+
+
+.trending-items-toggle {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.toggle-buttons-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.trending-items-toggle button {
+    border: 1px solid #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #fff;
+     font-size: 15px;
+     
+}
+
+.trending-items-toggle button.active {
+    background-color: #000;
+    color: #fff;
+}

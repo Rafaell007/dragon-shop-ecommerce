@@ -57,7 +57,10 @@
     border-radius: 5px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
+    .hero-banner-container {
+        height: 65vh;
+    }
     .hero-banner-content {
         left: 0;
         right: 0;
