@@ -1,49 +1,58 @@
-.embla {
-  margin-top: 30px;
-    
+.carousel {
+    margin-top: 1.875rem;
     --slide-height: 19rem;
-    --slide-spacing: 1rem;
+    --slide-spacing: 0.625rem;
     --slide-size: 20%;
-  }
-  .embla__viewport {
+}
+
+@media (max-width: 1200px) {
+    .carousel {
+        --slide-height: 15rem;
+        --slide-spacing: 0.3125rem;
+        --slide-size: 30%;
+    }
+}
+
+@media (max-width: 800px) {
+    .carousel {
+        --slide-height: 19rem;
+        --slide-spacing: 0.3125rem;
+        --slide-size: 40%;
+    }
+}
+
+.carousel-viewport {
     overflow: hidden;
-  }
-  .embla__container {
+}
+
+.carousel-track {
     display: flex;
     touch-action: pan-y pinch-zoom;
     margin-left: calc(var(--slide-spacing) * -1);
-  }
-  .embla__slide {
+}
+
+.carousel-slide {
     flex: 0 0 var(--slide-size);
     min-width: 0;
     padding-left: var(--slide-spacing);
-  }
-  .embla__slide__number {
-    border: 0.2rem solid #ccc;
-   
-    font-size: 4rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--slide-height);
-    user-select: none;
-  }
-  .embla__controls {
+}
+
+.carousel-controls {
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     gap: 1.2rem;
     margin-top: 1.8rem;
-  }
-  
-  .embla__selected-snap-display {
+}
+
+.carousel-snap-display {
     justify-self: flex-end;
     align-self: center;
     color: #888;
     font-weight: 600;
-  }
-  .embla__scrollbar {
+}
+
+.carousel-scrollbar {
     -webkit-appearance: none;
     appearance: none;
     background-color: transparent;
@@ -56,32 +65,40 @@
     margin-top: 1.8rem;
     width: 30%;
     padding: calc((1.6rem - 0.6rem) / 2) 0;
-  }
-  .embla__scrollbar::-webkit-slider-runnable-track {
-    border-radius: 10px;
+}
+
+.carousel-scrollbar::-webkit-slider-runnable-track {
+    border-radius: 0.625rem;
+    background: linear-gradient(to right, #000 var(--progress, 0%), #ccc var(--progress, 0%));
+    height: 0.2rem;
+}
+
+.carousel-scrollbar::-moz-range-track {
     background: #ccc;
     height: 0.3rem;
-  }
-  .embla__scrollbar::-moz-range-track {
-   
-    background: #ccc;
+    border-radius: 0.625rem;
+}
+
+.carousel-scrollbar::-moz-range-progress {
+    background: #000;
     height: 0.3rem;
-    border-radius: 10px;
-  }
-  .embla__scrollbar::-webkit-slider-thumb {
+    border-radius: 0.625rem;
+}
+
+.carousel-scrollbar::-webkit-slider-thumb {
     -webkit-appearance: none;
+    width: 2.5rem;
+    height: 0.4rem;
+    border-radius: 0.625rem;
+    border: 0;
+    background: #000;
+    margin-top: calc(0.25rem / 2 * -1);
+}
+
+.carousel-scrollbar::-moz-range-thumb {
     width: 1.1rem;
     height: 1.1rem;
     border-radius: 50%;
     border: 0;
     background: #000;
-    margin-top: calc((1.1rem - 0.4rem) / 2 * -1);
-  }
-  .embla__scrollbar::-moz-range-thumb {
-    width: 1.1rem;
-    height: 1.1rem;
-    border-radius: 50%;
-    border: 0;
-    background: #000;
-  }
-  
+}

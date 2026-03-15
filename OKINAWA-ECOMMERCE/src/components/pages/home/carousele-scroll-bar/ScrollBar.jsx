@@ -54,7 +54,7 @@ export const ScrollBar = (props) => {
 
   return (
     <input
-      className="embla__scrollbar"
+      className="carousel-scrollbar"
       onChange={onChange}
       type="range"
       id="slider"
@@ -62,6 +62,7 @@ export const ScrollBar = (props) => {
       max="1"
       step="0.001"
       value={value}
+      style={{ '--progress': `${value * 100}%` }}
     />
   )
 }

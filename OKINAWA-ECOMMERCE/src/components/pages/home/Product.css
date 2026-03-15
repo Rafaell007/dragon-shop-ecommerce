@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('../../assets/fonts/HorizoneSurvivePersonalUseOnly-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    height: 100%;
+}
+
+.product-image-container {
+    height: auto;
+}
+.product-name-container {
+    min-width: 0;
+}
+
+.product-name-container p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-price-container p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.add-to-cart-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #000;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.add-to-cart-button.added {
+    transform: scale(1.15);
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

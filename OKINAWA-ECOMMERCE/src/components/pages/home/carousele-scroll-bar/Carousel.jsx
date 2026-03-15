@@ -1,18 +1,40 @@
 import "./Carousel.css";
-export { ScrollBar, useScrollBar } from './ScrollBar'
+import { mockProducts } from "../../../../data/mockProducts";
+import { Product } from "../Product";
+import { AnimatePresence, motion } from "motion/react";
 
-export function Carousel({ emblaRef, slides }) {
+export function Carousel({ emblaRef, activeTab }) {
+  const trendingProducts = [...mockProducts]
+    .sort((a, b) => b.sold - a.sold)
+    .slice(0, 10);
+
+  const saleProducts = [...mockProducts]
+    .sort((a, b) => a.sold - b.sold)
+    .slice(0, 10);
+
   return (
-    <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
-            </div>
-          ))}
+    <AnimatePresence mode="wait">
+      <motion.section
+        className="carousel"
+        key={activeTab}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          opacity: { duration: 0.2 },
+          y: { duration: 0.3, ease: "easeOut" },
+        }}
+      >
+        <div className="carousel-viewport" ref={emblaRef}>
+          <div className="carousel-track">
+            {(activeTab === "popular" ? trendingProducts : saleProducts).map((product) => (
+              <div className="carousel-slide" key={product.id}>
+                <Product product={product} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  )
+      </motion.section>
+    </AnimatePresence>
+  );
 }

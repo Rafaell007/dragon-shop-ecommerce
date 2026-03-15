@@ -18,6 +18,7 @@ export const mockProducts = [
     category: "pants",
     color: "Red",
     size: "M",
+    sold: 189,
   },
   {
     id: "a1b2c3d4-2222-4000-a000-000000000002",
@@ -27,6 +28,7 @@ export const mockProducts = [
     category: "hoodies",
     color: "Gray",
     size: "L",
+    sold: 274,
   },
   {
     id: "a1b2c3d4-3333-4000-a000-000000000003",
@@ -36,6 +38,7 @@ export const mockProducts = [
     category: "caps",
     color: "Light Blue",
     size: "One Size",
+    sold: 18,
   },
   {
     id: "a1b2c3d4-4444-4000-a000-000000000004",
@@ -45,6 +48,7 @@ export const mockProducts = [
     category: "tshirts",
     color: "White",
     size: "M",
+    sold: 98,
   },
   {
     id: "a1b2c3d4-5555-4000-a000-000000000005",
@@ -54,6 +58,7 @@ export const mockProducts = [
     category: "hoodies",
     color: "White",
     size: "XL",
+    sold: 156,
   },
   {
     id: "a1b2c3d4-6666-4000-a000-000000000006",
@@ -63,6 +68,7 @@ export const mockProducts = [
     category: "hoodies",
     color: "Black",
     size: "L",
+    sold: 312,
   },
   {
     id: "a1b2c3d4-7777-4000-a000-000000000007",
@@ -72,6 +78,7 @@ export const mockProducts = [
     category: "tshirts",
     color: "White",
     size: "S",
+    sold: 43,
   },
   {
     id: "a1b2c3d4-8888-4000-a000-000000000008",
@@ -81,6 +88,7 @@ export const mockProducts = [
     category: "tshirts",
     color: "Black",
     size: "M",
+    sold: 27,
   },
   {
     id: "a1b2c3d4-9999-4000-a000-000000000009",
@@ -90,6 +98,7 @@ export const mockProducts = [
     category: "caps",
     color: "Navy Blue",
     size: "One Size",
+    sold: 12,
   },
   {
     id: "a1b2c3d4-aaaa-4000-a000-000000000010",
@@ -99,5 +108,6 @@ export const mockProducts = [
     category: "sport",
     color: "Orange",
     size: "One Size",
+    sold: 5,
   },
 ];

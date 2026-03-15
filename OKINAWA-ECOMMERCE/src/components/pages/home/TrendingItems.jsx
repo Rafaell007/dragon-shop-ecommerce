@@ -32,10 +32,10 @@ export function TrendingItems() {
               popular items
             </button>
             <button
-              className={activeTab === "trending" ? "active" : ""}
-              onClick={() => setActiveTab("trending")}
+              className={activeTab === "sale" ? "active" : ""}
+              onClick={() => setActiveTab("sale")}
             >
-              trending items
+              sale items
             </button>
 
             </div>
@@ -44,7 +44,7 @@ export function TrendingItems() {
           </div>
          
         </div>
-        <Carousel slides={SLIDES} emblaRef={emblaRef} />
+        <Carousel slides={SLIDES} activeTab={activeTab} emblaRef={emblaRef} emblaApi={emblaApi} />
       </div>
     </>
   );
