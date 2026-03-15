@@ -1,7 +1,9 @@
 import { Header } from "../../header/Header.jsx";
 import { Hero } from "../../hero/Hero.jsx";
 import { TrendingItems } from "./TrendingItems.jsx";
-import { ProductsGrid } from "./ProductsGrid.jsx";
+import { ShopByStyle } from "./ShopByStyle.jsx";
+
+
 
 export function HomePage() {
     return (
@@ -9,7 +11,9 @@ export function HomePage() {
         <Header />
         <Hero />
         <TrendingItems />
-        <ProductsGrid />
+        <ShopByStyle />
+       
+        
         </>
     )
 }

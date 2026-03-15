@@ -14,7 +14,11 @@
 
 .trending-items-container h2 {
     font-family: 'Horizon', sans-serif;
-    font-size: 2.9375rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: 'Horizon', sans-serif;
 }
 
 .trending-items-toggle {
