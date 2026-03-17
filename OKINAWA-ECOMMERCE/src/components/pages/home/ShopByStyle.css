@@ -40,22 +40,23 @@
 
 .style-item-label {
     position: absolute;
- 
     bottom: 0;
     left: 0;
     right: 0;
-    
     color: #fff;
     padding: 0.625rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
 
+.style-item-label:hover {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .style-item-label p {
     font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    
 }

@@ -1,0 +1,10 @@
+.shop-by-theme-header {
+    margin-bottom: 1.25rem;
+}
+.shop-by-theme-header h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: 'Horizon', sans-serif;
+}

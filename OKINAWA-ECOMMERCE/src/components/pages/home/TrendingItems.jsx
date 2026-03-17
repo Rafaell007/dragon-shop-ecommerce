@@ -1,8 +1,8 @@
 import "./TrendingItems.css";
 import { useState } from "react";
-import { Carousel } from "./carousele-scroll-bar/Carousel.jsx";
+import { Carousel } from "./carousels/carousele-scroll-bar/Carousel.jsx";
 import useEmblaCarousel from 'embla-carousel-react'
-import { ScrollBar, useScrollBar } from './carousele-scroll-bar/ScrollBar.jsx'
+import { ScrollBar, useScrollBar } from './carousels/carousele-scroll-bar/ScrollBar.jsx'
 
 
 

@@ -18,7 +18,9 @@
 
 .product-image-container {
     height: auto;
+    overflow: hidden;
 }
+
 .product-name-container {
     min-width: 0;
 }
@@ -33,6 +35,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.product-image-container img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 .product-price-container p{

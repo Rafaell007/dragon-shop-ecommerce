@@ -1,6 +1,6 @@
 import "./Carousel.css";
-import { mockProducts } from "../../../../data/mockProducts";
-import { Product } from "../Product";
+import { mockProducts } from "../../../../../data/mockProducts";
+import { Product } from "../../Product";
 import { AnimatePresence, motion } from "motion/react";
 
 export function Carousel({ emblaRef, activeTab }) {
