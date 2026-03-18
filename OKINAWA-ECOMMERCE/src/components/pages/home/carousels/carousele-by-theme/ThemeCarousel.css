@@ -42,6 +42,7 @@
 
 .theme-carousel .carousel-track {
     display: flex;
+    
     width: max-content;
     gap: var(--slide-spacing);
     animation: scroll 30s linear infinite;

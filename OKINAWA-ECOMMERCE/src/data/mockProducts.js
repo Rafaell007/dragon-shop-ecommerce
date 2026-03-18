@@ -19,6 +19,7 @@ export const mockProducts = [
     color: "Red",
     size: "M",
     sold: 189,
+    keywords: ["men", "pants", "clothing", "new", "best-seller", "sport", "animal", "theme"],
   },
   {
     id: "a1b2c3d4-2222-4000-a000-000000000002",
@@ -29,6 +30,7 @@ export const mockProducts = [
     color: "Gray",
     size: "L",
     sold: 274,
+    keywords: ["men", "hoodies", "clothing", "best-seller", "culture", "theme"],
   },
   {
     id: "a1b2c3d4-3333-4000-a000-000000000003",
@@ -39,6 +41,7 @@ export const mockProducts = [
     color: "Light Blue",
     size: "One Size",
     sold: 18,
+    keywords: ["kids", "accessory", "sale", "new", "animal", "theme"],
   },
   {
     id: "a1b2c3d4-4444-4000-a000-000000000004",
@@ -49,6 +52,7 @@ export const mockProducts = [
     color: "White",
     size: "M",
     sold: 98,
+    keywords: ["men", "tshirts", "shirts", "clothing", "new", "okiyoe", "theme"],
   },
   {
     id: "a1b2c3d4-5555-4000-a000-000000000005",
@@ -59,6 +63,7 @@ export const mockProducts = [
     color: "White",
     size: "XL",
     sold: 156,
+    keywords: ["women", "hoodies", "clothing", "new", "culture", "theme"],
   },
   {
     id: "a1b2c3d4-6666-4000-a000-000000000006",
@@ -69,6 +74,7 @@ export const mockProducts = [
     color: "Black",
     size: "L",
     sold: 312,
+    keywords: ["men", "hoodies", "clothing", "sale", "best-seller", "animal", "theme"],
   },
   {
     id: "a1b2c3d4-7777-4000-a000-000000000007",
@@ -79,6 +85,7 @@ export const mockProducts = [
     color: "White",
     size: "S",
     sold: 43,
+    keywords: ["women", "tshirts", "shirts", "clothing", "sale", "food", "theme"],
   },
   {
     id: "a1b2c3d4-8888-4000-a000-000000000008",
@@ -89,6 +96,7 @@ export const mockProducts = [
     color: "Black",
     size: "M",
     sold: 27,
+    keywords: ["men", "tshirts", "shirts", "clothing", "new", "okiyoe", "theme"],
   },
   {
     id: "a1b2c3d4-9999-4000-a000-000000000009",
@@ -99,6 +107,7 @@ export const mockProducts = [
     color: "Navy Blue",
     size: "One Size",
     sold: 12,
+    keywords: ["men", "accessory", "sale", "sport", "theme"],
   },
   {
     id: "a1b2c3d4-aaaa-4000-a000-000000000010",
@@ -109,5 +118,6 @@ export const mockProducts = [
     color: "Orange",
     size: "One Size",
     sold: 5,
+    keywords: ["men", "sport", "new", "best-seller", "theme"],
   },
 ];
