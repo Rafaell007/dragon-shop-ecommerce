@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useParams, useSearchParams } from "react-router";
 import { mockProducts } from "../../../data/mockProducts";
+import { Header } from "../../header/Header";
 import { ProductsGrid } from "../home/ProductsGrid";
 
 const PRESET_TAGS = {
@@ -53,7 +54,7 @@ export function ProductsPage() {
 
   return (
     <>
-     
+      <Header />
       <ProductsGrid products={filteredProducts} />
       
     </>

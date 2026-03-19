@@ -6,6 +6,7 @@ import { HeaderNavMobile } from "./HeaderNavMobile.jsx";
 import { useCart } from "../../context/CartContext";
 import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { Link } from "react-router";
 
 
 
@@ -37,7 +38,7 @@ export function Header() {
             <div className="header-container" ref={headerRef}>
                 <HeaderNavMobile />
                 <div className="header-logo" >
-                    <img src={okinawaLogo} alt="okinawa logo" />
+                   <Link to="/"> <img src={okinawaLogo} alt="okinawa logo" /> </Link> 
                 </div>
                 <HeaderNavigation />
                 <HeaderActions cartProducts = {cartProducts} />
