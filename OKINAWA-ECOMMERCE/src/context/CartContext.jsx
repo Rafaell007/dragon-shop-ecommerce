@@ -44,11 +44,8 @@ export function CartProvider({ children }) {
           id: product.id,
           name: product.name,
           image: product.image,
-          color: product.color,
-          size: product.size,
           priceCents: product.priceCents,
           quantity: 1,
-          deliveryOptionId: product.deliveryOptionId,
         },
       ]);
     }

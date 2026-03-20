@@ -8,8 +8,8 @@ function App() {
     <CartProvider>
       <Routes>
         <Route index element={<HomePage />} />
+        <Route path="/products/category/:categorySlug" element={<ProductsPage />} />
         <Route path="/products" element={<ProductsPage />} />
-        <Route path="/products/:preset" element={<ProductsPage />} />
       </Routes>
     </CartProvider>
   );

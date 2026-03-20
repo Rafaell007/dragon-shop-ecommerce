@@ -1,6 +1,16 @@
 .dropdown-item-content{
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-item-content a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+    padding: 8px 0;
 }
 .dropdown-item{
     overflow: hidden;

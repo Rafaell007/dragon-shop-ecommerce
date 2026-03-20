@@ -30,10 +30,10 @@ export function CartProductsList({ cartProducts, setIsOpen}) {
               <div className="cart-product-details">
                 <p className="product-name">{cartProduct.name}</p>
                 <p className="product-color">
-                  <b>Color:</b> {cartProduct.color}
+                  <b>Brand:</b> {cartProduct.brand}
                 </p>
                 <p className="product-size">
-                  <b>Size:</b> {cartProduct.size}
+                  <b>Category:</b> {cartProduct.category}
                 </p>
                 <p className="product-price">
                   {cartProduct.priceCents / 100} USD

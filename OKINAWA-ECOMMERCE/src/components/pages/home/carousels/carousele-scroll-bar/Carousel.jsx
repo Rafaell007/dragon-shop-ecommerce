@@ -3,6 +3,16 @@ import { mockProducts } from "../../../../../data/mockProducts";
 import { Product } from "../../Product";
 import { AnimatePresence, motion } from "motion/react";
 
+/** Tylko karuzela — mocki mają inny kształt niż API; Product oczekuje pól jak z Platzi. */
+function mockToApiProduct(p) {
+  return {
+    id: p.id,
+    title: p.name,
+    images: [p.image],
+    price: p.priceCents / 100,
+  };
+}
+
 export function Carousel({ emblaRef, activeTab }) {
   const trendingProducts = [...mockProducts]
     .sort((a, b) => b.sold - a.sold)
@@ -29,7 +39,7 @@ export function Carousel({ emblaRef, activeTab }) {
           <div className="carousel-track">
             {(activeTab === "popular" ? trendingProducts : saleProducts).map((product) => (
               <div className="carousel-slide" key={product.id}>
-                <Product product={product} />
+                <Product product={mockToApiProduct(product)} />
               </div>
             ))}
           </div>

@@ -1,73 +1,76 @@
-import { useMemo } from "react";
-import { useParams, useSearchParams } from "react-router";
-import { mockProducts } from "../../../data/mockProducts";
+import { useParams } from "react-router";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import {
+  getCategoryPageTitle,
+  getAllowedDummyCategorySlugs,
+} from "../../../constants/platziCategories";
 import { Header } from "../../header/Header";
 import { ProductsGrid } from "../home/ProductsGrid";
+import "./ProductsPage.css";
 
-const PRESET_TAGS = {
-  "new-in": ["new"],
-  "flash-sale": ["sale"],
-  "best-sellers": ["best-seller"],
-  "men": ["men"],
-  "women": ["women"],
-  "kids": ["kids"],
-  "themes": ["theme"],
-};
+const DUMMYJSON_PRODUCTS = "https://dummyjson.com/products";
+
 
 export function ProductsPage() {
-  const { preset } = useParams();
-  const [searchParams] = useSearchParams();
+  const { categorySlug } = useParams();
+  const [products, setProducts] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(12);
 
-  const presetTags = useMemo(()=>{
-    if (!preset) return [];
-    return PRESET_TAGS[preset] || []
-  }, [preset])
+  useEffect(() => {
+    let cancelled = false;
 
+    const loadProducts = async () => {
+      const response = await axios.get(DUMMYJSON_PRODUCTS, {
+        params: { limit: 200 },
+      });
+      const list = Array.isArray(response.data.products)
+        ? response.data.products
+        : [];
 
-
-
-
-
-  const tags = useMemo(() => {
-  const rawTags = searchParams.get("tags") || "";
-
-    return rawTags
-      .split(",")
-      .map((tag) => tag.trim().toLowerCase())
-      .filter(Boolean);
-  }, [searchParams]);
-
-  const activeTags = useMemo(()=>{
-    return [... new Set ([...presetTags, ...tags])];
-  }, [presetTags, tags])
-
-  const filteredProducts = useMemo(() => {
-    if (activeTags.length === 0) return mockProducts;
-
-    return mockProducts.filter((product) => {
-      const productTags = (product.keywords || []).map((tag) =>
-        tag.toLowerCase(),
+      const allowed = getAllowedDummyCategorySlugs(categorySlug);
+      const filtered = list.filter((p) =>
+        allowed ? allowed.includes(p.category) : true,
       );
-      return activeTags.every((tag) => productTags.includes(tag));
-    });
-  }, [activeTags]);
+
+      if (!cancelled) {
+        setProducts(filtered);
+      }
+    };
+
+    loadProducts();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [categorySlug]);
+
+  const displayedProducts = products.slice(0, visibleCount );
+  const hasMore = visibleCount < products.length;
+
+  const pageTitle = getCategoryPageTitle(categorySlug);
 
   return (
     <>
       <Header />
-      <ProductsGrid products={filteredProducts} />
-      
+      <div className="products-page-container">
+      <p className="products-page-items-count">{displayedProducts.length} / {products.length} items</p>
+        <div className="products-page-header">
+          <h1>{pageTitle}</h1>
+        </div>
+        <ProductsGrid products={displayedProducts} />
+        {hasMore && (
+          <div className="load-more-wrapper">
+            <button
+            onClick={ ()=> setVisibleCount(prev => prev + 12) }
+            className="load-more-button"
+
+            >
+              LOAD MORE
+            </button>
+          </div>
+        )}
+      </div>
     </>
   );
 }
-
-/* The URL changes (?tags=shoes,sport)
-        ↓
-useSearchParams detects the change
-        ↓
-useMemo updates tags = [“shoes”, “sport”]
-        ↓
-useMemo filters the products (only those with BOTH tags)
-        ↓
-ProductsGrid displays the filtered products */
-
