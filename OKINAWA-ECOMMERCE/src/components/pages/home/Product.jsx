@@ -2,6 +2,7 @@ import "./Product.css";
 import { useState } from "react";
 import { useCart } from "../../../context/CartContext";
 import { BsCartPlus, BsCartCheckFill } from "react-icons/bs";
+import { Link } from "react-router";
 
 export function Product({ product }) {
   const { addToCart } = useCart();
@@ -25,7 +26,9 @@ export function Product({ product }) {
   return (
     <div className="product-container">
       <div className="product-image-container">
+        <Link to={`/product/${product.id}`}>
         <img src={imageSrc} alt="" />
+        </Link>
         <button
           type="button"
           onClick={handleClick}
