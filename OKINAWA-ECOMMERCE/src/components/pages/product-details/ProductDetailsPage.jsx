@@ -62,10 +62,14 @@ export function ProductDetailsPage() {
               />
             </div>
             <div className="product-details-container">
-              <div className="product-name-container"></div>
-              <div className="product-price-container"></div>
+              <div className="product-name-container">
+                <h2>{product.title}</h2>
+              </div>
+              <div className="product-price-container">
+                <p>{product.price} $ USD</p>
+              </div>
               <div className="product-quantity-container"></div>
-              <div className="add-to-cart-button"></div>
+             
               <div className="payment-methods-container"></div>
             </div>
           </div>

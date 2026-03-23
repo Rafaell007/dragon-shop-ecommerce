@@ -1,9 +1,13 @@
-/* Blok: product-details — strona / sekcja szczegółów produktu */
+.description-container {
+  display: flex;
+
+  
+  padding: 20px;
+}
 
 .product-details__summary-image {
-  height: 500px;
-  width: 500px;
-  border-radius: 10px;
+  height: 90vh;
+  width: 50vw;
   overflow: hidden;
   background-color: #f6f6f6;
 }
