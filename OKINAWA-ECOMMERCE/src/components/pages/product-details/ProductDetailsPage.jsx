@@ -46,6 +46,8 @@ export function ProductDetailsPage() {
     };
   }, [productId]);
 
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <>
       <Header />
@@ -61,14 +63,39 @@ export function ProductDetailsPage() {
                 alt=""
               />
             </div>
-            <div className="product-details-container">
-              <div className="product-name-container">
-                <h2>{product.title}</h2>
+            <div className="product-details__container">
+              
+                <h2 className="product-details__title">{product.title}</h2>
+              
+              <p className="product-details__price">{product.price} $ USD</p>
+              
+              <div className="product-details__quantity-section">
+                <p className="product-details__quantity-label">Quantity</p>
+                <div className="product-details__quantity-buttons">
+                  <button
+                    type="button"
+                    className={
+                      quantity > 1
+                        ? "product-details__quantity-button"
+                        : "product-details__quantity-button product-details__quantity-button--disabled"
+                    }
+                    onClick={() => {
+                      if (quantity > 1) setQuantity(quantity - 1);
+                    }}
+                    disabled={quantity <= 1}
+                  >
+                    -
+                  </button>
+                  <p className="product-details__quantity-value">{quantity}</p>
+                  <button
+                    type="button"
+                    className="product-details__quantity-button"
+                    onClick={() => setQuantity(quantity + 1)}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
-              <div className="product-price-container">
-                <p>{product.price} $ USD</p>
-              </div>
-              <div className="product-quantity-container"></div>
              
               <div className="payment-methods-container"></div>
             </div>
