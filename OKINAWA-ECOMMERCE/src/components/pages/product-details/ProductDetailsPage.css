@@ -32,16 +32,13 @@
   width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
  
   display: block;
 }
 
 .product-details_images-grid {
-  width: 100%;
-  
-
+  width: 60%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -266,12 +263,15 @@
 .product-details__carousel {
   margin-top: 0.5rem;
 }
-
+.product-details__image-grid-element.selected {
+  border: 1px solid #000;
+}
 .product-details__description-section {
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
 }
+
 
 .product-details__description-label {
   font-weight: 500;

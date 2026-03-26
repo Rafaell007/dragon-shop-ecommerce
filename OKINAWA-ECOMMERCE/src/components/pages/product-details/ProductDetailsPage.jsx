@@ -12,12 +12,17 @@ import { AlsoLikeSection } from "./AlsoLikeSection";
 
 
 export function ProductDetailsPage() {
+ 
+
+
+
   const { productId } = useParams();
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     if (!productId) {
       setLoading(false);
@@ -52,7 +57,13 @@ export function ProductDetailsPage() {
     };
   }, [productId]);
 
+  useEffect(() => {
+    setSelectedImage(null);
+    setQuantity(1);
+  }, [product?.id]);
+
   const reviews = product?.reviews ?? [];
+  const displayedImage = selectedImage ?? product?.images?.[0] ?? product?.thumbnail;
 
   return (
     <>
@@ -65,15 +76,17 @@ export function ProductDetailsPage() {
             <div className="product-details__summary-image">
               <img
                 className="product-details__image"
-                src={product.images[0] ?? product.thumbnail}
+                src={displayedImage}
                 alt=""
               />
                 <div className="product-details_images-grid">
                 {product.images.map((image)=>{
                   return (
                     <img src={image}
-                    className="product-details__image-grid-element"
-                
+                    className={`product-details__image-grid-element ${selectedImage === image ? 'selected' : ''}`}
+                    onClick={()=>{
+                      setSelectedImage(image);
+                    }}
                     alt="" />
                   )
                 })}
@@ -82,9 +95,9 @@ export function ProductDetailsPage() {
             <div className="product-details__container">
               <h2 className="product-details__title">{product.title}</h2>
               <p className="product-details__price">{product.price} $ USD</p>
-              <QuantitySection />
+              <QuantitySection quantity={quantity} onQuantityChange={setQuantity} />
               <MemberBenefitsSection />
-              <PaymentMethods />
+              <PaymentMethods product={product} quantity={quantity} />
               <img
                 className="product-details__free-shipping-banner"
                 src={freeShippingBanner}

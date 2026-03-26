@@ -1,16 +1,17 @@
 import { BsCart } from "react-icons/bs";
 
 import "./Checkout.css";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { CartHeaderContent } from "./CartHeaderContent.jsx";
 import { CartProductsList } from "./CartProductsList.jsx";
 import { CartPaymentSummary } from "./CartPaymentSummary.jsx";
+import { useCart } from "../../../context/CartContext";
 
 
 
 export function CheckoutCartButton({ cartProducts }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isCartOpen: isOpen, setIsCartOpen: setIsOpen } = useCart();
   
   useEffect(() => {
     isOpen

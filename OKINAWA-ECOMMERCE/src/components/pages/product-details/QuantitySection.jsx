@@ -1,9 +1,4 @@
-import { useState } from "react";
-
-
-export function QuantitySection() {
-
-    const [quantity, setQuantity] = useState(1);
+export function QuantitySection({ quantity, onQuantityChange }) {
     return (
         <>
          <div className="product-details__quantity-section">
@@ -17,7 +12,7 @@ export function QuantitySection() {
                         : "product-details__quantity-button product-details__quantity-button--disabled"
                     }
                     onClick={() => {
-                      if (quantity > 1) setQuantity(quantity - 1);
+                      if (quantity > 1) onQuantityChange(quantity - 1);
                     }}
                     disabled={quantity <= 1}
                   >
@@ -27,7 +22,7 @@ export function QuantitySection() {
                   <button
                     type="button"
                     className="product-details__quantity-button"
-                    onClick={() => setQuantity(quantity + 1)}
+                    onClick={() => onQuantityChange(quantity + 1)}
                   >
                     +
                   </button>

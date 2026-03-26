@@ -52,14 +52,13 @@ export function Header() {
                     >
                     <HeaderNavMobile />
                     <div className="header-logo" >
-                        <img src={okinawaLogo} alt="okinawa logo" />
+                       <Link to="/"> <img src={okinawaLogo} alt="okinawa logo" /> </Link> 
                     </div>
-                    <HeaderNavigation />
-                    <HeaderActions cartProducts = {cartProducts} />
-                </motion.div>
-
-                )}
-            </AnimatePresence>
-        </>
-    )
+          <HeaderNavigation />
+          <HeaderActions cartProducts={cartProducts} />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </>
+);
 }
