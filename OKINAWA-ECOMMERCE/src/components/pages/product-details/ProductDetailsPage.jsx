@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import freeShippingBanner from "../../../assets/images/product-details/free-shipping.webp";
+import { ProductImage } from "./ProductImage";
 import { QuantitySection } from "./QuantitySection";
 import { MemberBenefitsSection } from "./MemberBenefitsSection";
 import { PaymentMethods } from "./PaymentMethods";
@@ -21,7 +22,6 @@ export function ProductDetailsPage() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null);
   const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     if (!productId) {
@@ -58,12 +58,11 @@ export function ProductDetailsPage() {
   }, [productId]);
 
   useEffect(() => {
-    setSelectedImage(null);
     setQuantity(1);
   }, [product?.id]);
 
   const reviews = product?.reviews ?? [];
-  const displayedImage = selectedImage ?? product?.images?.[0] ?? product?.thumbnail;
+ 
 
   return (
     <>
@@ -73,25 +72,7 @@ export function ProductDetailsPage() {
       {!loading && !error && product && (
         <div className="page-wrapper">
           <div className="description-container">
-            <div className="product-details__summary-image">
-              <img
-                className="product-details__image"
-                src={displayedImage}
-                alt=""
-              />
-                <div className="product-details_images-grid">
-                {product.images.map((image)=>{
-                  return (
-                    <img src={image}
-                    className={`product-details__image-grid-element ${selectedImage === image ? 'selected' : ''}`}
-                    onClick={()=>{
-                      setSelectedImage(image);
-                    }}
-                    alt="" />
-                  )
-                })}
-              </div>
-            </div>
+            <ProductImage key={product.id} product={product} />
             <div className="product-details__container">
               <h2 className="product-details__title">{product.title}</h2>
               <p className="product-details__price">{product.price} $ USD</p>
