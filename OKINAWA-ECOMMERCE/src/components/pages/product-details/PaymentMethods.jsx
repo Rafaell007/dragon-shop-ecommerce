@@ -18,29 +18,29 @@ export function PaymentMethods({product, quantity}) {
 
     return(
         <>
-            <div className="product-details__payment-methods">
+            <div className="product-detail__payments">
                 <button
                   type="button"
-                  className="product-details__payment-button product-details__payment-button--add-to-cart"
+                  className="product-detail__pay-btn product-detail__pay-btn--add-to-cart"
                   onClick={handleAddToCart}
                 >
                   Add to cart
                 </button>
                 <button
                   type="button"
-                  className="product-details__payment-button product-details__payment-button--buy-now"
+                  className="product-detail__pay-btn product-detail__pay-btn--buy-now"
                 >
                   Buy now
                 </button>
                 <button
                   type="button"
-                  className="product-details__payment-button product-details__payment-button--paypal"
+                  className="product-detail__pay-btn product-detail__pay-btn--paypal"
                 >
                   <img src={PayPalLogo} alt="PayPal" />
                 </button>
                 <button
                   type="button"
-                  className="product-details__payment-button product-details__payment-button--apple-pay"
+                  className="product-detail__pay-btn product-detail__pay-btn--apple-pay"
                 >
                   <img src={ApplePayLogo} alt="Apple Pay" />
                 </button>

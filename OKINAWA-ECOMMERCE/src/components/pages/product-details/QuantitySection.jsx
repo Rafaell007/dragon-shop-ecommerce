@@ -1,15 +1,15 @@
 export function QuantitySection({ quantity, onQuantityChange }) {
     return (
         <>
-         <div className="product-details__quantity-section">
-                <p className="product-details__quantity-label">Quantity</p>
-                <div className="product-details__quantity-buttons">
+         <div className="product-detail__qty-section">
+                <p className="product-detail__qty-label">Quantity</p>
+                <div className="product-detail__qty-controls">
                   <button
                     type="button"
                     className={
                       quantity > 1
-                        ? "product-details__quantity-button"
-                        : "product-details__quantity-button product-details__quantity-button--disabled"
+                        ? "product-detail__qty-btn"
+                        : "product-detail__qty-btn product-detail__qty-btn--disabled"
                     }
                     onClick={() => {
                       if (quantity > 1) onQuantityChange(quantity - 1);
@@ -18,10 +18,10 @@ export function QuantitySection({ quantity, onQuantityChange }) {
                   >
                     -
                   </button>
-                  <p className="product-details__quantity-value">{quantity}</p>
+                  <p className="product-detail__qty-value">{quantity}</p>
                   <button
                     type="button"
-                    className="product-details__quantity-button"
+                    className="product-detail__qty-btn"
                     onClick={() => onQuantityChange(quantity + 1)}
                   >
                     +

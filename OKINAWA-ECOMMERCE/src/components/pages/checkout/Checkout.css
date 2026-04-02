@@ -1,6 +1,6 @@
 
 
-.cart-sidebar-overlay {
+.mini-cart__overlay {
     position: fixed;
     inset: 0;
     z-index: 2; 
@@ -10,12 +10,12 @@
 
 
 
-.cart-button-container{
+.mini-cart__trigger{
     position: relative;
    
 }
 
-.cart-button-container button {
+.mini-cart__trigger-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -23,13 +23,13 @@
     color: #000;
 }
 
-.cart-button-container button:hover {
+.mini-cart__trigger-btn:hover {
     color: rgba(0,0,0,0.5);
     scale: 1.1;
     transition: scale 0.3s ease-in-out;
 }
 
-.cart-count{
+.mini-cart__count{
     position: absolute;
     top: -6px;
     right: -6px;
@@ -47,7 +47,7 @@
     
 }
 
-.cart-sidebar{
+.mini-cart__panel{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@
 
 }
 
-.cart-sidebar-content{
+.mini-cart__body{
     flex: 1;
     min-height: 0;
     overflow-y: auto;

@@ -4,15 +4,15 @@ import heroBanner from "../../assets/images/hero/hero-banner.webp";
 export function Hero() {
     return(
         <>
-        <div className='hero-banner-container'>
-            <img src={heroBanner} alt="" />
-            <div className="hero-banner-content">
-                <div className="hero-banner-content-text">
-                <h1>FEEL THE SPRING!</h1>
-                <p>Discover the latest trends in Okinawa Shop now.</p>
+        <div className="hero">
+            <img className="hero__image" src={heroBanner} alt="" />
+            <div className="hero__content">
+                <div className="hero__text">
+                <h1 className="hero__title">FEEL THE SPRING!</h1>
+                <p className="hero__subtitle">Discover the latest trends in Okinawa Shop now.</p>
                 </div>
                
-                    <button className="call-to-action-button" >Shop Now</button>
+                    <button type="button" className="hero__cta" >Shop Now</button>
                 
             </div> 
         </div>

@@ -18,12 +18,12 @@ const slides = [...themes, ...themes, ...themes]; // I duplicate the slides to m
 export function ThemeCarousel() {
   return (
     <section className="theme-carousel">
-        <div className="carousel-viewport">
-          <div className="carousel-track">
+        <div className="theme-carousel__viewport">
+          <div className="theme-carousel__track">
             {slides.map((theme, index) => (
-              <div className="carousel-slide" key={index}>
-                <div className="theme-item">
-                  <img src={theme.src} alt={theme.alt} />
+              <div className="theme-carousel__slide" key={index}>
+                <div className="theme-carousel__thumb">
+                  <img className="theme-carousel__image" src={theme.src} alt={theme.alt} />
                 </div>
               </div>
             ))}

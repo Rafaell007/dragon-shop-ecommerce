@@ -4,7 +4,7 @@ import "./ProductsGrid.css";
 
 export function ProductsGrid({products}) {
   return (
-    <div className="products-grid-container">
+    <div className="products-grid">
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}

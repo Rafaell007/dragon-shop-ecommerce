@@ -16,41 +16,42 @@ export function CartHeaderContent({ setIsOpen }) {
   return (
     
     <>
-      <div className="cart-header-container">
-        <div className="cart-header">
-          <h2>Cart</h2>
-          <div className="cart-sidebar-close">
+      <div className="mini-cart__header">
+        <div className="mini-cart__title-row">
+          <h2 className="mini-cart__title">Cart</h2>
+          <div className="mini-cart__close">
             <button
-            
+              type="button"
+              className="mini-cart__close-btn"
               aria-label="Close mobile menu"  onClick={() => setIsOpen(false)}
             >
               X
             </button>
           </div>
         </div>
-        <div className="free-shipping-container">
-          <p>
+        <div className="mini-cart__shipping">
+          <p className="mini-cart__shipping-text">
             {isFreeShipping
               ? "Free shipping unlocked!"
               : <>Add<strong> {remaining.toFixed(2)} $</strong> to unlock free shipping</>}
           </p>
 
           
-          <div className="free-shipping-bar-road">
+          <div className="mini-cart__progress-track">
             <motion.div
-              className="free-shipping-icon"
+              className="mini-cart__progress-icon"
               initial={{ left: 0 }}
               animate={{ left: `${progress}%` }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <LiaShippingFastSolid />
             </motion.div>
-            <div className="free-shipping-text">
-                <p>Free shipping</p>
+            <div className="mini-cart__progress-label">
+                <p className="mini-cart__progress-label-text">Free shipping</p>
             </div>
 
             <motion.div
-              className="free-shipping-bar"
+              className="mini-cart__progress-fill"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5, ease: "easeOut" }}

@@ -43,7 +43,7 @@ export function ProductDetailsPage() {
         if (!cancelled) setProduct(data);
       } catch {
         if (!cancelled) {
-          setError(" can't load product ");
+          setError("can't load product");
           setProduct(null);
         }
       } finally {
@@ -70,17 +70,17 @@ export function ProductDetailsPage() {
       {loading && <p>Loading...</p>}
       {!loading && error && <p role="alert">{error}</p>}
       {!loading && !error && product && (
-        <div className="page-wrapper">
-          <div className="description-container">
+        <div className="product-detail">
+          <div className="product-detail__main">
             <ProductImage key={product.id} product={product} />
-            <div className="product-details__container">
-              <h2 className="product-details__title">{product.title}</h2>
-              <p className="product-details__price">{product.price} $ USD</p>
+            <div className="product-detail__info">
+              <h2 className="product-detail__title">{product.title}</h2>
+              <p className="product-detail__price">{product.price} $ USD</p>
               <QuantitySection quantity={quantity} onQuantityChange={setQuantity} />
               <MemberBenefitsSection />
               <PaymentMethods product={product} quantity={quantity} />
               <img
-                className="product-details__free-shipping-banner"
+                className="product-detail__shipping-banner"
                 src={freeShippingBanner}
                 alt="free shipping banner"
               />
@@ -90,9 +90,9 @@ export function ProductDetailsPage() {
          
           </div>
         
-          <div className="product-details__description-section">
-                <p className="product-details__description-label">Description:</p>
-                <p className="product-details__description-text">{product.description}</p>
+          <div className="product-detail__description">
+                <p className="product-detail__description-label">Description:</p>
+                <p className="product-detail__description-text">{product.description}</p>
               </div>
           <CommentsSection reviews={reviews} productId={product.id} />
           <AlsoLikeSection product={product} />

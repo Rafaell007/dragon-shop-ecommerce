@@ -1,15 +1,15 @@
-.header-nav-mobile {
+.sidebar-nav {
     display: none;
     z-index: 2;
 }
-.header-nav-mobile-button{
+.sidebar-nav__menu-button{
     font-size: 20px;
     cursor: pointer;
     border: none;
     background-color: transparent;
     
 }
-.mobile-sidebar-overlay{
+.sidebar-nav__overlay{
     position: fixed;
     inset: 0;
     z-index: 1;
@@ -18,7 +18,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.mobile-sidebar{
+.sidebar-nav__panel{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
    
 }
 
-.mobile-sidebar-content{
+.sidebar-nav__content{
     flex: 1;
     min-height: 0;
     
@@ -42,7 +42,7 @@
     overflow-y: auto;
    
 }
-.mobile-sidebar-list{
+.sidebar-nav__list{
     list-style: none;
     margin: 0;
     display: flex;
@@ -51,7 +51,7 @@
   
   
 }
-    .mobile-sidebar-wishlist{
+    .sidebar-nav__wishlist{
       
         display:flex;
         gap: 6px;
@@ -62,19 +62,19 @@
         padding-top: 20px;
        
     }
-.mobile-sidebar-content::before,
-.mobile-sidebar-content::after{
+.sidebar-nav__content::before,
+.sidebar-nav__content::after{
  content: '';
  display: block;
  height: 1px;
  background-color: rgba(0,0,0,0.075);
  margin: 0 20px;
 }
-.mobile-sidebar-close{
+.sidebar-nav__close{
     text-align: right;
     padding: 10px 20px;
 }
-.mobile-sidebar-close button{
+.sidebar-nav__close button{
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
@@ -82,8 +82,8 @@
     background-color: transparent;
 }
 
-.mobile-sidebar-list a,
-.mobile-sidebar-list a:visited {
+.sidebar-nav__link,
+.sidebar-nav__link:visited {
     text-decoration: none;
     color: #000;
     font-weight: 600;
@@ -92,13 +92,13 @@
     padding: 0 20px;
 }
 
-.mobile-sidebar-wishlist a{
+.sidebar-nav__wishlist-link{
     font-size: 14px;
     text-decoration: none;
 }
 
 @media (max-width: 980px) {
-    .header-nav-mobile{
+    .sidebar-nav{
         display: block;
     }
 }

@@ -21,15 +21,15 @@ export function CommentsSection({ reviews, productId }) {
 
   return (
     <>
-      <div className="product-details_customers-reviews-section">
-        <h2 className="customers-reviews_title">
+      <div className="product-reviews">
+        <h2 className="product-reviews__title">
           Customers reviews ({reviews.length})
         </h2>
 
         {displayedReviews.map((review, index) => (
           <motion.div
             key={`${productId}-review-${index}`}
-            className="customers-reviews_comment-container"
+            className="product-reviews__item"
             initial={{ opacity: 0, y: -18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -40,20 +40,20 @@ export function CommentsSection({ reviews, productId }) {
               delay: index * 0.06,
             }}
           >
-            <div className="customers-rewiews_comment-author-container">
-              <p className="customers-reviews_comment-author">
+            <div className="product-reviews__meta">
+              <p className="product-reviews__author">
                 {review.reviewerName}
               </p>
 
-              <p className="customers-reviews_comment-date">
+              <p className="product-reviews__date">
                 {new Date(review.date).toLocaleDateString()}
               </p>
             </div>
 
-            <p className="customers-reviews_comment">{review.comment}</p>
+            <p className="product-reviews__text">{review.comment}</p>
 
             <div
-              className="customers-reviews_stars-container"
+              className="product-reviews__stars"
               role="img"
               aria-label={`Rating ${review.rating} out of 5`}
             >
@@ -62,13 +62,13 @@ export function CommentsSection({ reviews, productId }) {
                 readonly
                 emptySymbol={
                   <BsStar
-                    className="customers-reviews__star customers-reviews__star--empty"
+                    className="product-reviews__star product-reviews__star--empty"
                     aria-hidden
                   />
                 }
                 fullSymbol={
                   <BsStarFill
-                    className="customers-reviews__star customers-reviews__star--full"
+                    className="product-reviews__star product-reviews__star--full"
                     aria-hidden
                   />
                 }
@@ -80,7 +80,7 @@ export function CommentsSection({ reviews, productId }) {
         {canShowMore && (
           <button
             type="button"
-            className="customers-reviews_show-more-button"
+            className="product-reviews__more"
             onClick={() => setVisibleCount((prev) => prev + 5)}
           >
             <BsChevronDown aria-hidden />

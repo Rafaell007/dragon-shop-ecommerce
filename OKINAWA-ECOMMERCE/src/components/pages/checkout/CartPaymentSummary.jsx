@@ -16,26 +16,27 @@ export function CartPaymentSummary( ) {
 
     return (
         <>
-        <div className="cart-payment-summary-container">
-            <div className="total-price-container">
-                <h4>Total</h4>
-                <p>{finalPrice.toFixed(2)} USD</p>
+        <div className="mini-cart__summary">
+            <div className="mini-cart__total-row">
+                <h4 className="mini-cart__total-heading">Total</h4>
+                <p className="mini-cart__total-value">{finalPrice.toFixed(2)} USD</p>
             </div>
-            <div className="worry-free-delivery-container">
-                <label>
+            <div className="mini-cart__addon">
+                <label className="mini-cart__addon-label">
                     <input
                      type="checkbox"
                      checked={worryFree}
                      onChange={() => setWorryFree(!worryFree)}
+                     className="mini-cart__addon-checkbox"
                      />
-                    <span><b>Worry-free delivery</b> for $0.98 USD</span>
+                    <span className="mini-cart__addon-copy"><b>Worry-free delivery</b> for $0.98 USD</span>
                 </label>
-                <p>Get a full refund if the order doesn't arrive as described, including loss & damage in transit</p>
+                <p className="mini-cart__addon-note">Get a full refund if the order doesn't arrive as described, including loss & damage in transit</p>
             </div>
-            <div className="payment-methods-container">
-            <button className="paypal-button"><img src={PayPalLogo} alt="PayPal" /></button>
-            <button className="apple-pay-button"><img src={ApplePayLogo} alt="Apple Pay" /></button>
-            <button className="checkout-button">Checkout</button>
+            <div className="mini-cart__payments">
+            <button type="button" className="mini-cart__pay-btn mini-cart__pay-btn--paypal"><img src={PayPalLogo} alt="PayPal" /></button>
+            <button type="button" className="mini-cart__pay-btn mini-cart__pay-btn--apple-pay"><img src={ApplePayLogo} alt="Apple Pay" /></button>
+            <button type="button" className="mini-cart__pay-btn mini-cart__pay-btn--checkout">Checkout</button>
             </div>
         </div>
         </>

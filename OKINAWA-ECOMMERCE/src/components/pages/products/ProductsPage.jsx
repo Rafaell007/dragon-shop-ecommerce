@@ -9,6 +9,7 @@ import { Header } from "../../header/Header";
 import { ProductsGrid } from "../home/ProductsGrid";
 import "./ProductsPage.css";
 
+
 const DUMMYJSON_PRODUCTS = "https://dummyjson.com/products";
 
 
@@ -53,17 +54,18 @@ export function ProductsPage() {
   return (
     <>
       <Header />
-      <div className="products-page-container">
-      <p className="products-page-items-count">{displayedProducts.length} / {products.length} items</p>
-        <div className="products-page-header">
-          <h1>{pageTitle}</h1>
+      <div className="products-page">
+      <p className="products-page__counter">{displayedProducts.length} / {products.length} items</p>
+        <div className="products-page__head">
+          <h1 className="products-page__title">{pageTitle}</h1>
         </div>
         <ProductsGrid products={displayedProducts} />
         {hasMore && (
-          <div className="load-more-wrapper">
+          <div className="products-page__load-more">
             <button
+            type="button"
             onClick={ ()=> setVisibleCount(prev => prev + 12) }
-            className="load-more-button"
+            className="products-page__load-more-btn"
 
             >
               LOAD MORE

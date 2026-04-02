@@ -54,7 +54,7 @@ export const ScrollBar = (props) => {
 
   return (
     <input
-      className="carousel-scrollbar"
+      className="carousel__scrollbar"
       onChange={onChange}
       type="range"
       id="slider"

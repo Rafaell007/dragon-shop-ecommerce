@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./ProductImage.css";
 
 export function ProductImage({ product }) {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -7,18 +6,19 @@ export function ProductImage({ product }) {
 
     return (
         <>
-        <div className="product-details__summary-image">
+        <div className="product-detail__gallery">
               <img
-                className="product-details__image"
+                className="product-detail__image"
                 src={displayedImage}
                 alt=""
               />
               
-                <div className="product-details_images-grid">
+                <div className="product-detail__thumbs">
                 {product.images.map((image)=>{
                   return (
                     <img src={image}
-                    className={`product-details__image-grid-element ${selectedImage === image ? 'selected' : ''}`}
+                    key={image}
+                    className={`product-detail__thumb${selectedImage === image ? " product-detail__thumb--selected" : ""}`}
                     onClick={()=>{
                       setSelectedImage(image);
                     }}

@@ -1,4 +1,4 @@
-@keyframes scroll {
+@keyframes theme-carousel-scroll {
     0% {
         transform: translateX(0);
     }
@@ -12,18 +12,18 @@
     --slide-spacing: 0.5rem;
     --slide-width: clamp(110px, 19vw, 200px);
 }
-.theme-item {
+.theme-carousel__thumb {
     aspect-ratio: 1;
     overflow: hidden;
 }
-.theme-item img {
+.theme-carousel__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease-in-out;
 }
-.theme-item img:hover {
+.theme-carousel__image:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
@@ -36,20 +36,20 @@
 
 
 
-.theme-carousel .carousel-viewport {
+.theme-carousel__viewport {
     overflow: hidden;
 }
 
-.theme-carousel .carousel-track {
+.theme-carousel__track {
     display: flex;
     
     width: max-content;
     gap: var(--slide-spacing);
-    animation: scroll 30s linear infinite;
+    animation: theme-carousel-scroll 30s linear infinite;
 }
 
 
-.theme-carousel .carousel-slide {
+.theme-carousel__slide {
     width: var(--slide-width);
     flex: 0 0 auto;
 }

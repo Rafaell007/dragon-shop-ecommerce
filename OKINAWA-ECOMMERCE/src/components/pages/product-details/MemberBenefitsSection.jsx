@@ -11,45 +11,45 @@ import {
     return (
         <>
         
-        <div className="product-details_member-benefits-section">
-                <div className="product-details_member-benefits-icon-container">
-                  <BsPerson className="product-details_member-benefits-icon" />
+        <div className="product-detail__member">
+                <div className="product-detail__member-icon-wrap">
+                  <BsPerson className="product-detail__member-icon" />
                 </div>
-                <div className="product-details__member-benefits-copy">
-                  <p className="product-details__member-benefits-lead">
+                <div className="product-detail__member-copy">
+                  <p className="product-detail__member-lead">
                     Become a member to unlock more member only benefits!
                   </p>
-                  <div className="product-details__member-benefits-list">
-                    <div className="product-details__member-benefit-item">
+                  <div className="product-detail__member-list">
+                    <div className="product-detail__member-item">
                       <BsTruck
-                        className="product-details__member-benefit-icon"
+                        className="product-detail__member-item-icon"
                         aria-hidden
                       />
-                      <p className="product-details__member-benefit-text">
+                      <p className="product-detail__member-item-text">
                         Free shipping
                       </p>
                     </div>
-                    <div className="product-details__member-benefit-item">
+                    <div className="product-detail__member-item">
                       <BsGift
-                        className="product-details__member-benefit-icon"
+                        className="product-detail__member-item-icon"
                         aria-hidden
                       />
-                      <p className="product-details__member-benefit-text">
+                      <p className="product-detail__member-item-text">
                         30% off
                       </p>
                     </div>
-                    <div className="product-details__member-benefit-item">
+                    <div className="product-detail__member-item">
                       <BsStar
-                        className="product-details__member-benefit-icon"
+                        className="product-detail__member-item-icon"
                         aria-hidden
                       />
-                      <p className="product-details__member-benefit-text">
+                      <p className="product-detail__member-item-text">
                         Get 100 Points
                       </p>
                     </div>
                   </div>
                 </div>
-                <BsArrowRight className="product-details_arrow-right-icon" />
+                <BsArrowRight className="product-detail__member-arrow" />
               </div>
         
         

@@ -1,4 +1,4 @@
-.cart-payment-summary-container{
+.mini-cart__summary{
     display: flex;
     flex-direction:column;
     height: 320px;
@@ -7,18 +7,18 @@
     padding: 20px;
 }
 
-.total-price-container {
+.mini-cart__total-row {
     display: flex;
     justify-content: space-between;
 }
 
-.total-price-container h4,
-.total-price-container p {
+.mini-cart__total-heading,
+.mini-cart__total-value {
     font-size: 18px;
     font-weight: 600;
 }
 
-.worry-free-delivery-container {
+.mini-cart__addon {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -28,35 +28,35 @@
     margin-top: 5px;
 }
 
-.worry-free-delivery-container label {
+.mini-cart__addon-label {
     display: flex;
     gap: 10px;
     font-size: 15px;
 }
-.worry-free-delivery-container label input {
+.mini-cart__addon-checkbox {
     width: 16px;
     height: 16px;
 }
 
-.worry-free-delivery-container p {
+.mini-cart__addon-note {
     font-size: 12px;
 }
 
-.payment-methods-container {
+.mini-cart__payments {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
 
 }
-.payment-methods-container button {
+.mini-cart__pay-btn {
     min-height: 50px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
-.payment-methods-container button img{
+.mini-cart__pay-btn img{
     width: auto;
     height: 20px;
    
@@ -66,28 +66,28 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.payment-methods-container button:hover img {
+.mini-cart__pay-btn:hover img {
     opacity: 0.4;
     transition: all 0.3s ease-in-out;
 }
 
-.paypal-button {
+.mini-cart__pay-btn--paypal {
     background-color: #f7a816;
 }
-.apple-pay-button {
+.mini-cart__pay-btn--apple-pay {
     background-color: #000;
 }
-.apple-pay-button img {
+.mini-cart__pay-btn--apple-pay img {
     filter: invert(1);
 }
-.checkout-button {
+.mini-cart__pay-btn--checkout {
     background-color: #000;
     color: #fff;
     font-size: 15px;
     transition: all 0.3s ease-in-out;
     font-weight: 600;
 }
-.checkout-button:hover {
+.mini-cart__pay-btn--checkout:hover {
     opacity: 0.8;
     transition: all 0.3s ease-in-out;
 }

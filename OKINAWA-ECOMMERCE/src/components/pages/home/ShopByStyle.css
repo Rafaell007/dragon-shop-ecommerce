@@ -1,20 +1,20 @@
-.wrapper {
+.shop-style {
     margin: 0 auto;
     padding: 1.25rem 1.875rem;
     max-width: 1600px;
 }
 
-.shop-by-style-header {
+.shop-style__header {
     margin-bottom: 1.25rem;
 }
-.shop-by-style-header h2 {
+.shop-style__title {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.05em;
     font-family: 'Horizon', sans-serif;
 }
-.shop-by-style-container {
+.shop-style__grid {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
     gap: 1.25rem;
    
 }
-.style-item {
+.shop-style__card {
     position: relative;
    flex: 1;
    aspect-ratio: 3/4;
@@ -30,7 +30,7 @@
 
 }
 
-.style-item img {
+.shop-style__image {
     
     width: 100%;
     height: 100%;
@@ -38,7 +38,7 @@
     display: block;
 }
 
-.style-item-label {
+.shop-style__label {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -52,10 +52,10 @@
     cursor: pointer;
 }
 
-.style-item-label:hover {
+.shop-style__label:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
-.style-item-label p {
+.shop-style__label-text {
     font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;

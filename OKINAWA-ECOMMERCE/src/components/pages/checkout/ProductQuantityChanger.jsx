@@ -8,25 +8,27 @@ export function ProductQuantityChanger({ cartProduct }) {
 
     return (
         <>
-          <div className="product-quantity-container">
-                  <div className="product-quantity-buttons">
+          <div className="mini-cart__qty">
+                  <div className="mini-cart__qty-controls">
                     <button
-                      className= { cartProduct.quantity > 1 ? "product-quantity-button" : "product-quantity-button-disabled"}
+                      type="button"
+                      className={ cartProduct.quantity > 1 ? "mini-cart__qty-btn" : "mini-cart__qty-btn mini-cart__qty-btn--disabled"}
                       onClick=  {cartProduct.quantity > 1 && (
                         () => removeFromCart(cartProduct)
                       ) }
                     >
                       -
                     </button>
-                    <p className="product-quantity">{cartProduct.quantity}</p>
+                    <p className="mini-cart__qty-value">{cartProduct.quantity}</p>
                     <button
-                      className="product-quantity-button"
+                      type="button"
+                      className="mini-cart__qty-btn"
                       onClick={() => addToCart(cartProduct)}
                     >
                       +
                     </button>
                   </div>
-                  <button className="product-delete-button" onClick={() => deleteFromCart(cartProduct)}>
+                  <button type="button" className="mini-cart__qty-remove" onClick={() => deleteFromCart(cartProduct)}>
                     <BsTrash />
                   </button>
                 </div>

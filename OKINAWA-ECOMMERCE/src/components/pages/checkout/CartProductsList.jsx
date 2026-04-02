@@ -11,29 +11,29 @@ export function CartProductsList({ cartProducts, setIsOpen}) {
     <>
     {cartProducts.length === 0 
     && (
-    <div className="empty-cart">
-      <p>Your cart is empty.</p>
-      <button className="continue-shopping-button" onClick={() => setIsOpen(false)}>Continue Shopping</button>
+    <div className="mini-cart__empty">
+      <p className="mini-cart__empty-text">Your cart is empty.</p>
+      <button type="button" className="mini-cart__continue-btn" onClick={() => setIsOpen(false)}>Continue Shopping</button>
     </div>  
     
   )}
 
-      <div className="cart-products-list-container">
+      <div className="mini-cart__lines">
         {cartProducts.map((cartProduct) => {
           return (
-            <div className="cart-product">
-              <div className="cart-product-image">
+            <div className="mini-cart__line" key={cartProduct.id}>
+              <div className="mini-cart__line-image">
                 <img src={cartProduct.image} alt={cartProduct.name} />
               </div>
-              <div className="cart-product-details">
-                <p className="product-name">{cartProduct.name}</p>
-                <p className="product-color">
+              <div className="mini-cart__line-body">
+                <p className="mini-cart__line-name">{cartProduct.name}</p>
+                <p className="mini-cart__line-brand">
                   <b>Brand:</b> {cartProduct.brand}
                 </p>
-                <p className="product-size">
+                <p className="mini-cart__line-category">
                   <b>Category:</b> {cartProduct.category}
                 </p>
-                <p className="product-price">
+                <p className="mini-cart__line-price">
                   {cartProduct.priceCents / 100} USD
                 </p>
                 <ProductQuantityChanger cartProduct={cartProduct} />

@@ -35,15 +35,15 @@ export function AlsoLikeSection({ product }) {
         <>
            
           {relatedProducts.length > 0 && (
-            <section className="product-details__also-like" aria-labelledby="also-like-heading">
-              <h2 id="also-like-heading" className="product-details__also-like-title">
+            <section className="product-detail__related" aria-labelledby="also-like-heading">
+              <h2 id="also-like-heading" className="product-detail__related-title">
                 You may also like
               </h2>
               <Carousel
                 items={relatedProducts}
                 motionKey={product.id}
                 renderSlide={(p) => <Product product={p} />}
-                className="product-details__carousel"
+                className="product-detail__carousel"
               />
             </section>
           )}

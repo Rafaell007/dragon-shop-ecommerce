@@ -31,13 +31,13 @@ export function Header() {
 
     return (
         <>
-            <div className="free-shipping-banner">
-                <p>Free Shipping on Orders Over $100</p>
+            <div className="site-header__shipping">
+                <p className="site-header__shipping-text">Free Shipping on Orders Over $100</p>
             </div>
             
-            <div className="header-container" ref={headerRef}>
+            <div className="site-header__bar" ref={headerRef}>
                 <HeaderNavMobile />
-                <div className="header-logo" >
+                <div className="site-header__logo" >
                    <Link to="/"> <img src={okinawaLogo} alt="okinawa logo" /> </Link> 
                 </div>
                 <HeaderNavigation />
@@ -45,13 +45,13 @@ export function Header() {
             </div>
             <AnimatePresence>
                 {showSticky && (
-                    <motion.div className="header-container header-sticky"
+                    <motion.div className="site-header__bar site-header__bar--sticky"
                     initial={{ y: "-100%" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.3, ease: "ease" }}
                     >
                     <HeaderNavMobile />
-                    <div className="header-logo" >
+                    <div className="site-header__logo" >
                        <Link to="/"> <img src={okinawaLogo} alt="okinawa logo" /> </Link> 
                     </div>
           <HeaderNavigation />

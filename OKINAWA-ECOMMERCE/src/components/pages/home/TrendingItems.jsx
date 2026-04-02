@@ -36,21 +36,21 @@ export function TrendingItems() {
 
   return (
     <>
-      <div className="categories-container">
-        <div className="trending-items-container">
-          <h2>everyone likes to buy</h2>
-          <div className="trending-items-toggle">
-            <div className="toggle-buttons-wrapper">
+      <div className="trending">
+        <div className="trending__header">
+          <h2 className="trending__title">everyone likes to buy</h2>
+          <div className="trending__toolbar">
+            <div className="trending__tabs">
               <button
                 type="button"
-                className={activeTab === "popular" ? "active" : ""}
+                className={`trending__tab${activeTab === "popular" ? " trending__tab--active" : ""}`}
                 onClick={() => setActiveTab("popular")}
               >
                 popular items
               </button>
               <button
                 type="button"
-                className={activeTab === "sale" ? "active" : ""}
+                className={`trending__tab${activeTab === "sale" ? " trending__tab--active" : ""}`}
                 onClick={() => setActiveTab("sale")}
               >
                 sale items

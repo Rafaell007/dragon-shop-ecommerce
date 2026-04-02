@@ -29,10 +29,10 @@ export function Carousel({ items, motionKey, onEmblaApiReady, renderSlide, class
           y: { duration: 0.3, ease: "easeOut" },
         }}
       >
-        <div className="carousel-viewport" ref={emblaRef}>
-          <div className="carousel-track">
+        <div className="carousel__viewport" ref={emblaRef}>
+          <div className="carousel__track">
             {items.map((item) => (
-              <div className="carousel-slide" key={item.id}>
+              <div className="carousel__slide" key={item.id}>
                 {renderSlide(item)}
               </div>
             ))}

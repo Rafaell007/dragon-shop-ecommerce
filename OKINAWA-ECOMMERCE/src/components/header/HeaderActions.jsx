@@ -8,23 +8,23 @@ export function HeaderActions({ cartProducts }) {
   return (
     <>
       <div className="header-actions">
-        <div className="header-actions-search">
-          <a href="">
+        <div className="header-actions__search">
+          <a className="header-actions__icon-link" href="">
             <BsSearch />
           </a>
         </div>
-        <div className="header-actions-wishlist">
-          <a href="">
+        <div className="header-actions__wishlist">
+          <a className="header-actions__icon-link" href="">
             <BsHeart />
           </a>
-          <div className="wishlist-dropdown">
+          <div className="header-actions__wishlist-popup">
             <BsHeart />
-            <p>Sign in to view your wishlist</p>
-            <button>Sign in</button>
+            <p className="header-actions__wishlist-text">Sign in to view your wishlist</p>
+            <button type="button" className="header-actions__wishlist-btn">Sign in</button>
           </div>
         </div>
-        <div className="header-actions-user">
-          <a href="">
+        <div className="header-actions__account">
+          <a className="header-actions__icon-link" href="">
             <BsPerson />
           </a>
         </div>

@@ -1,7 +1,13 @@
-.shop-by-theme-header {
+.shop-theme {
+    margin: 0 auto;
+    padding: 1.25rem 1.875rem;
+    max-width: 1600px;
+}
+
+.shop-theme__header {
     margin-bottom: 1.25rem;
 }
-.shop-by-theme-header h2 {
+.shop-theme__title {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 600;

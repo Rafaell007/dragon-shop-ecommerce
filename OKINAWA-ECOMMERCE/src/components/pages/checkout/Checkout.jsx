@@ -30,19 +30,19 @@ export function CheckoutCartButton({ cartProducts }) {
 
   return (
     <>
-      <div className="cart-button-container">
-        <button onClick={() => setIsOpen(!isOpen)}>
+      <div className="mini-cart__trigger">
+        <button type="button" className="mini-cart__trigger-btn" onClick={() => setIsOpen(!isOpen)}>
           <BsCart />
         </button>
-        <div className="cart-count">
-          <span>{totalQuantity}</span>
+        <div className="mini-cart__count">
+          <span className="mini-cart__count-value">{totalQuantity}</span>
         </div>
       </div>
 
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="cart-sidebar-overlay"
+            className="mini-cart__overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -54,11 +54,11 @@ export function CheckoutCartButton({ cartProducts }) {
               animate={{ x: "0%" }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="cart-sidebar"
+              className="mini-cart__panel"
               onClick={(e) => e.stopPropagation()}
             >
                <CartHeaderContent setIsOpen={setIsOpen} />
-              <div className="cart-sidebar-content">
+              <div className="mini-cart__body">
                
                 <CartProductsList cartProducts={cartProducts} setIsOpen={setIsOpen} />
               </div>

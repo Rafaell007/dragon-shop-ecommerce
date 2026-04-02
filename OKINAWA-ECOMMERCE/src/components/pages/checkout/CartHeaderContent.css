@@ -1,19 +1,19 @@
-.cart-header-container{
+.mini-cart__header{
     display: flex;
     flex-direction: column; 
 }
-.cart-header{
+.mini-cart__title-row{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px;
     border-bottom: 1px rgba(0,0,0,0.1) solid;
 }
-.cart-header h2{
+.mini-cart__title{
     font-weight: 500;
     text-transform: uppercase;
 }
-.cart-sidebar-close button{
+.mini-cart__close-btn{
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
@@ -21,7 +21,7 @@
     background-color: transparent;
 }
 
-.free-shipping-container{
+.mini-cart__shipping{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +34,12 @@
     border-radius: 10px;
     margin-top: 20px;
 }
-.free-shipping-container p{
+.mini-cart__shipping-text{
     font-size: 13px;
     text-align: center;
 }
 
-.free-shipping-bar-road{
+.mini-cart__progress-track{
     margin-top: 10px;
     position: relative;
     width: 100%;
@@ -48,7 +48,7 @@
     background-color: rgba(0,0,0,0.1);
 }
 
-.free-shipping-icon{
+.mini-cart__progress-icon{
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -64,13 +64,13 @@
     transition: left 0.5s ease-out;
 }
 
-.free-shipping-bar{
+.mini-cart__progress-fill{
     height: 100%;
     border-radius: 99px;
     background-color: rgb(247, 168, 22);
 }
 
-.free-shipping-text{
+.mini-cart__progress-label{
     position: absolute;
     right: 0;
     bottom: 15px;
@@ -78,7 +78,7 @@
     padding: 2px 6px;
     border-radius: 15px;
 }
-.free-shipping-text p{
+.mini-cart__progress-label-text{
     font-size: 12px;
     font-weight: 600;
     color: #fff;

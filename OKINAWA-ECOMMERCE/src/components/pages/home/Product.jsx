@@ -24,25 +24,25 @@ export function Product({ product }) {
   };
 
   return (
-    <div className="product-container">
-      <div className="product-image-container">
-        <Link to={`/product/${product.id}`}>
-        <img src={imageSrc} alt="" />
+    <div className="product-card">
+      <div className="product-card__media">
+        <Link className="product-card__image-link" to={`/product/${product.id}`}>
+        <img className="product-card__image" src={imageSrc} alt="" />
         </Link>
         <button
           type="button"
           onClick={handleClick}
-          className={`add-to-cart-button ${added ? "added" : ""}`}
+          className={`product-card__cart-btn${added ? " product-card__cart-btn--added" : ""}`}
           aria-label="Add to cart"
         >
           {added ? <BsCartCheckFill /> : <BsCartPlus />}
         </button>
       </div>
-      <div className="product-name-container">
-        <p>{title}</p>
+      <div className="product-card__title-wrap">
+        <p className="product-card__title">{title}</p>
       </div>
-      <div className="product-price-container">
-        <p>{priceLabel}</p>
+      <div className="product-card__price-wrap">
+        <p className="product-card__price">{priceLabel}</p>
       </div>
     </div>
   );

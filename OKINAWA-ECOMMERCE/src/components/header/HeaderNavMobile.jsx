@@ -18,9 +18,10 @@ export function HeaderNavMobile() {
 
   return (
     <>
-      <div className="header-nav-mobile">
+      <div className="sidebar-nav">
         <button
-          className="header-nav-mobile-button"
+          className="sidebar-nav__menu-button"
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Open mobile menu"
         >
@@ -30,7 +31,7 @@ export function HeaderNavMobile() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="mobile-sidebar-overlay"
+              className="sidebar-nav__overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -42,21 +43,22 @@ export function HeaderNavMobile() {
                 animate={{ x: "0%" }}
                 exit={{ x: "-100%" }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="mobile-sidebar"
+                className="sidebar-nav__panel"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="mobile-sidebar-close">
+                <div className="sidebar-nav__close">
                   <button
+                    type="button"
                     onClick={() => setIsOpen(false)}
                     aria-label="Close mobile menu"
                   >
                     X
                   </button>
                 </div>
-                <div className="mobile-sidebar-content">
-                  <ul className="mobile-sidebar-list">
-                    <li>
-                      <Link to="/products" onClick={() => setIsOpen(false)}>
+                <div className="sidebar-nav__content">
+                  <ul className="sidebar-nav__list">
+                    <li className="sidebar-nav__item">
+                      <Link className="sidebar-nav__link" to="/products" onClick={() => setIsOpen(false)}>
                         All products
                       </Link>
                     </li>
@@ -68,8 +70,9 @@ export function HeaderNavMobile() {
                         onNavigate={() => setIsOpen(false)}
                       >
                         {group.subcategories.map((sub) => (
-                          <li key={sub.slug}>
+                          <li className="sidebar-nav-dropdown__sub-item" key={sub.slug}>
                             <Link
+                              className="sidebar-nav-dropdown__sub-link"
                               to={`/products/category/${sub.slug}`}
                               onClick={() => setIsOpen(false)}
                             >
@@ -81,11 +84,11 @@ export function HeaderNavMobile() {
                     ))}
                   </ul>
                 </div>
-                <div className="mobile-sidebar-wishlist">
-                  <Link to="/wishlist" onClick={() => setIsOpen(false)}>
+                <div className="sidebar-nav__wishlist">
+                  <Link className="sidebar-nav__wishlist-link" to="/wishlist" onClick={() => setIsOpen(false)}>
                     <BsHeart />
                   </Link>
-                  <Link to="/wishlist" onClick={() => setIsOpen(false)}>
+                  <Link className="sidebar-nav__wishlist-link" to="/wishlist" onClick={() => setIsOpen(false)}>
                     wishlist
                   </Link>
                 </div>

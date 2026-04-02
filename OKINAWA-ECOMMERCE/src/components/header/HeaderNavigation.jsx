@@ -4,21 +4,21 @@ import { NAV_CATEGORY_GROUPS } from "../../constants/platziCategories";
 
 export function HeaderNavigation() {
   return (
-    <div className="header-nav">
-      <ul className="header-nav-list">
-        <li>
-          <Link to="/products">All products</Link>
+    <nav className="main-nav">
+      <ul className="main-nav__list">
+        <li className="main-nav__item">
+          <Link className="main-nav__link" to="/products">All products</Link>
         </li>
         {NAV_CATEGORY_GROUPS.map((group) => (
           <li
             key={group.slug}
-            className="header-nav-list-item has-dropdown"
+            className="main-nav__item main-nav__item--has-dropdown"
           >
-            <Link to={`/products/category/${group.slug}`}>{group.label}</Link>
-            <ul className="nav-dropdown">
+            <Link className="main-nav__link" to={`/products/category/${group.slug}`}>{group.label}</Link>
+            <ul className="main-nav__dropdown">
               {group.subcategories.map((sub) => (
-                <li key={sub.slug}>
-                  <Link to={`/products/category/${sub.slug}`}>
+                <li className="main-nav__dropdown-item" key={sub.slug}>
+                  <Link className="main-nav__link main-nav__link--sub" to={`/products/category/${sub.slug}`}>
                     {sub.label}
                   </Link>
                 </li>
@@ -27,6 +27,6 @@ export function HeaderNavigation() {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 }
