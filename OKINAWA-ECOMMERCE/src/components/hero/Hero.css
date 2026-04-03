@@ -9,59 +9,92 @@
 
 .hero {
     position: relative;
-    height: 95vh;
+    width: 100%;
     margin-bottom: 20px;
     margin-top: 10px;
-    
-
+    overflow: hidden;
+    cursor: none;
+   
 }
-.hero__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
+
+
+.hero__cursor {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transition: width 0.1s linear, height 0.1s linear;
+}
+
+.hero:hover .hero__cursor {
     display: block;
 }
-.hero__content {
+
+.hero:has(.hero__cta-wrap:hover) .hero__cursor {
+    width: 150px;
+    height: 150px;
+}
+
+
+
+
+.hero__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+.hero__cta-wrap {
     position: absolute;
-   bottom: 10%;
-   right: 5%;
-   max-width: 1920px;
- 
-  
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
     padding: 30px;
 }
-.hero__title {
-    font-size: 100px;
-    color: #fff;
-    font-family: 'Horizon', sans-serif;
-}
-.hero__subtitle {
-    font-size: 20px;
-    color: #fff;
 
-}
 
-.hero__cta{
-   
-    background-color: black;
-    color: white;
-    padding: 30px 110px;
-    border: none;
+
+.hero__cta-button {
+    pointer-events: auto;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    border-radius: 5px;
+    border: none;
+    background: transparent;
+    font-size: 92px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: 'Horizon', sans-serif;
+    color: #f0ea30;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    cursor: none;
+    transition: all 0.3s ease-in-out;
+    
 }
+.hero__cta-button:hover {
+    scale: 1.1;
+    opacity: 0.8;
+
+}
+
+
 
 @media (max-width: 1400px) {
-    .hero {
-        height: 65vh;
-    }
     .hero__content {
         left: 0;
         right: 0;
@@ -91,10 +124,7 @@
     .hero__subtitle {
         font-size: 16px;
     }
-    .hero__cta {
-        padding: 20px 80px;
-        font-size: 14px;
-    }
+   
 }
 @media (max-width: 480px) {
     .hero__title {
@@ -103,8 +133,5 @@
     .hero__subtitle {
         font-size: 14px;
     }
-    .hero__cta {
-        padding: 16px 48px;
-        font-size: 13px;
-    }
+   
 }

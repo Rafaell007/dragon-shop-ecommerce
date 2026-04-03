@@ -31,8 +31,8 @@
 
 .mini-cart__count{
     position: absolute;
-    top: -6px;
-    right: -6px;
+    bottom: -6px;
+    right: -9px;
     background-color: #000000;
     color: #fff;
     border-radius: 50%;
@@ -44,6 +44,7 @@
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    padding: 6px;
     
 }
 
