@@ -4,18 +4,14 @@ import { TrendingItems } from "./TrendingItems.jsx";
 import { ShopByStyle } from "./ShopByStyle.jsx";
 import { ShopByTheme } from "./ShopByTheme.jsx";
 
-
-
 export function HomePage() {
-    return (
-        <>
-        <Header />
-        <Hero />
-        <TrendingItems />
-        <ShopByStyle />
-        <ShopByTheme />
-       
-        
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <Hero />
+      <TrendingItems />
+      <ShopByStyle />
+      <ShopByTheme />
+    </>
+  );
 }

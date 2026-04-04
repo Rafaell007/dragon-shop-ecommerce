@@ -4,14 +4,14 @@ import axios from "axios";
 import { Carousel } from "../../carousel/Carousel.jsx";
 import { ScrollBar, useScrollBar } from "../../carousel/ScrollBar.jsx";
 import { Product } from "./Product";
-import { GsapTextAnimation } from "./GsapTextAnimation.jsx";
-
+import { GsapTextAnimation } from "./gsapAnimations/TrendingItemsGsap.jsx";
 const PRODUCTS_URL = "https://dummyjson.com/products";
 
 
 
 
 export function TrendingItems() {
+  const containerRef = useRef(null);
   const [activeTab, setActiveTab] = useState("popular");
   const [products, setProducts] = useState([]);
   const [emblaApi, setEmblaApi] = useState(null);
@@ -39,19 +39,16 @@ export function TrendingItems() {
   }, [products, activeTab]);
 
 
-  const trendingRef = useRef(null);
-  const titleRef = useRef(null);
 
   return (
     <>
       <GsapTextAnimation
-        sectionRef={trendingRef}
-        titleRef={titleRef}
-        dependencies={[products.length]}
+        containerRef={containerRef}
+        productsLength={products.length}
       />
-      <div ref={trendingRef} className="trending">
+      <div ref={containerRef} className="trending">
         <div className="trending__header">
-          <h2 ref={titleRef} className="trending__title">
+          <h2 className="trending__title">
             everyone likes to buy
           </h2>
           <div className="trending__toolbar">
