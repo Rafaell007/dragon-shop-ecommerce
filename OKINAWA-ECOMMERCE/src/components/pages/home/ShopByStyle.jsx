@@ -38,7 +38,7 @@ export function ShopByStyle() {
       <div className="shop-style__grid">
         <div className="shop-style__card">
           <img className="shop-style__image" src={shopMen} alt="shop men" />
-          <div className="shop-style__label">
+          <div className="shop-style__label"> 
             <p className="shop-style__label-text">Men</p>
             <BsArrowRight className="shop-style__label-icon" />
           </div>
