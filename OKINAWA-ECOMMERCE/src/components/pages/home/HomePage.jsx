@@ -3,6 +3,7 @@ import { Hero } from "../../hero/Hero.jsx";
 import { TrendingItems } from "./TrendingItems.jsx";
 import { ShopByStyle } from "./ShopByStyle.jsx";
 import { ShopByTheme } from "./ShopByTheme.jsx";
+import { AccesoriesSection } from "./AccesoriesSection.jsx";
 
 export function HomePage() {
   return (
@@ -12,6 +13,7 @@ export function HomePage() {
       <TrendingItems />
       <ShopByStyle />
       <ShopByTheme />
+      <AccesoriesSection />
     </>
   );
 }

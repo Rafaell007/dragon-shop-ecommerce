@@ -40,6 +40,10 @@
     display: block;
 }
 
+.hero:has(.hero__cta-wrap:hover) .hero__cursor {
+    width: 120px;
+    height: 120px;
+}
 
 
 
@@ -117,9 +121,18 @@
    
 }
 @media (max-width: 680px) {
+    .hero {
+        cursor: pointer;
+    }
     .hero__cta-button {
         font-size: 48px;
+        cursor: pointer;
       }
+     .hero:hover .hero__cursor,
+     .hero__cursor {
+        display: none;
+    }
+   
  
    
 }
@@ -127,8 +140,11 @@
 @media (max-width: 480px) {
     .hero__cta-button {
         font-size: 38px;
+        cursor: pointer;
       }
- 
-   
+      .hero:hover .hero__cursor,
+      .hero__cursor {
+         display: none;
+     }
 }
 
