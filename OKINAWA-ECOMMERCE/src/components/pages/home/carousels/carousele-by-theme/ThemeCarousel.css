@@ -8,9 +8,9 @@
 }
 
 .theme-carousel {
-    margin-top: 1.875rem;
     --slide-spacing: 0.5rem;
     --slide-width: clamp(110px, 19vw, 200px);
+    margin-bottom: 20px;
 }
 .theme-carousel__thumb {
     aspect-ratio: 1;

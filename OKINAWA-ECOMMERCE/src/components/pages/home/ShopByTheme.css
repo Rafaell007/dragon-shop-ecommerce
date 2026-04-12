@@ -1,12 +1,13 @@
 .shop-theme {
     margin: 0 auto;
-    padding: 1.25rem 1.875rem;
-    max-width: 1600px;
 }
 
 .shop-theme__header {
-    margin-bottom: 1.25rem;
+    padding: 1.25rem 1.875rem;
+    max-width: 1600px;
+    margin: 0 auto;
 }
+
 .shop-theme__title {
     font-size: 3rem;
     text-transform: uppercase;

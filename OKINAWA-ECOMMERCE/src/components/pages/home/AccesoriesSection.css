@@ -124,6 +124,7 @@
 
   .accesories-section-wrapper {
     height: auto;
+    max-height: none;
     min-height: unset;
   }
 
@@ -153,3 +154,5 @@
     grid-row: 3;
   }
 }
+
+

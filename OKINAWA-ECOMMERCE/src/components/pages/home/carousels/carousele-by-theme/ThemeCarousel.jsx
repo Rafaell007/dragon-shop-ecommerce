@@ -13,7 +13,7 @@ const themes = [
   { src: cultureTheme, alt: "culture theme" },
 ];
 
-const slides = [...themes, ...themes, ...themes]; // I duplicate the slides to make the carousel infinite, witout big gaps
+const slides = [...themes, ...themes, ...themes, ...themes]; // I duplicate the slides to make the carousel infinite, witout big gaps
 
 export function ThemeCarousel() {
   return (
