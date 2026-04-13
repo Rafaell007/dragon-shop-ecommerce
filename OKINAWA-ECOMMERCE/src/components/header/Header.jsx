@@ -32,7 +32,7 @@ export function Header() {
     return (
         <>
             <div className="site-header__shipping">
-                <p className="site-header__shipping-text">Free Shipping on Orders Over $100</p>
+                <p className="site-header__shipping-text">Free Shipping on Orders Over $200</p>
             </div>
             
             <div className="site-header__bar" ref={headerRef}>

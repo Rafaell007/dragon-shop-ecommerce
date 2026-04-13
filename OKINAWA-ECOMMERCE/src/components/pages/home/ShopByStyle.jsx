@@ -9,32 +9,32 @@ import gsap from "gsap";
 
 export function ShopByStyle() {
   const sectionRef = useRef(null);
+  const headerRef = useRef(null);
   const hasPlayed = useRef(false);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   useEffect(() => {
     if (!isInView || hasPlayed.current) return;
-    const title = sectionRef.current?.querySelector(".shop-style__title");
-    if (!title) return;
+    const header = headerRef.current;
+    if (!header) return;
 
     hasPlayed.current = true;
 
     gsap.fromTo(
-      title,
+      header,
       { opacity: 0, x: -100 },
       { opacity: 1, x: 0, duration: 0.7, ease: "power2.inOut" },
     );
   }, [isInView]);
 
   return (
-    <motion.div
+    <div
       ref={sectionRef}
       className="shop-style"
-      initial={false}
     >
-      <div className="shop-style__header">
+      <motion.div ref={headerRef} className="shop-style__header" initial={false}>
         <h2 className="shop-style__title">Shop By Style</h2>
-      </div>
+      </motion.div>
       <div className="shop-style__grid">
         <div className="shop-style__card">
           <img className="shop-style__image" src={shopMen} alt="shop men" />
@@ -58,6 +58,6 @@ export function ShopByStyle() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
