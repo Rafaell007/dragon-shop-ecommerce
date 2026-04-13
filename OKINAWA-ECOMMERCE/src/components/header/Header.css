@@ -1,9 +1,10 @@
 .site-header__shipping {
+    position: relative;
+    z-index: 2;
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 10px 30px;
-   
 }
 
 .site-header__shipping-text {
@@ -14,11 +15,12 @@
 
 .site-header__bar {
     position: relative;
+    z-index: 3;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 30px;
-    
 }
 
 .site-header__bar--sticky {

@@ -10,6 +10,7 @@ import { MemberBenefitsSection } from "./MemberBenefitsSection";
 import { PaymentMethods } from "./PaymentMethods";
 import { CommentsSection } from "./CommentsSection";
 import { AlsoLikeSection } from "./AlsoLikeSection";
+import { Footer } from "../../footer/Footer";
 
 
 export function ProductDetailsPage() {
@@ -98,6 +99,7 @@ export function ProductDetailsPage() {
           <AlsoLikeSection product={product} />
         </div>
       )}
+      <Footer />
     </>
   );
 }

@@ -11,17 +11,17 @@ export function ShopByStyle() {
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
   const hasPlayed = useRef(false);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.05 });
 
   useEffect(() => {
     if (!isInView || hasPlayed.current) return;
-    const header = headerRef.current;
-    if (!header) return;
+    const animationElement = headerRef.current;
+    if (!animationElement) return;
 
     hasPlayed.current = true;
 
     gsap.fromTo(
-      header,
+      animationElement,
       { opacity: 0, x: -100 },
       { opacity: 1, x: 0, duration: 0.7, ease: "power2.inOut" },
     );

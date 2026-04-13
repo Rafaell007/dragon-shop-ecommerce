@@ -5,17 +5,22 @@ import { ShopByStyle } from "./ShopByStyle.jsx";
 import { ShopByTheme } from "./ShopByTheme.jsx";
 import { AccesoriesSection } from "./AccesoriesSection.jsx";
 import { AboutUsSection } from "./AboutUsSection.jsx";
+import { Footer } from "../../footer/Footer.jsx";
 
 export function HomePage() {
   return (
     <>
-      <Header />
-      <Hero />
-      <TrendingItems />
-      <ShopByStyle />
-      <ShopByTheme />
-      <AccesoriesSection />
-      <AboutUsSection />
+      
+        <Header />
+        <main className="page-content">
+        <Hero />
+        <TrendingItems />
+        <ShopByStyle />
+        <ShopByTheme />
+        <AccesoriesSection />
+        <AboutUsSection />
+      </main>
+      <Footer />
     </>
   );
 }
