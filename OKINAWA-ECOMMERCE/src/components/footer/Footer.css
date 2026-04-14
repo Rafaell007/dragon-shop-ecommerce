@@ -14,20 +14,138 @@
     position: fixed;
     inset: auto 0 0 0;
     height: var(--footer-height);
-    background-color: #000;
-    color: #fff;
     z-index: 1;
 }
 .site-footer__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100%;
+    margin-top: 100px;
+    background-color: #f8f8f8;
 }
-.site-footer__title {
-    font-size: 30px;
-    font-weight: 700;
+.site-footer__perks {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.footer-perk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 40px;
+   
+}
+
+.footer-perk__icon {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+.footer-perk__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #000;
+}
+
+.footer-perk__description {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    color: #000;
+}
+
+.site-footer__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+
+}
+.site-footer__columns {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 1;
+}
+.site-footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.site-footer__column-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+}
+.site-footer__column-description {
+    font-size: 0.9rem;
+    color: #000;
+    opacity: 0.7;
+}
+.site-footer__column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.site-footer__column ul li {
+    margin-bottom: 10px;
+}
+.site-footer__column ul li a {
+    text-decoration: none;
+    color: #000;
+    opacity: 0.7;
+}
+
+.site-footer__input-wrapper {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 5px;
+    display: flex;
+    gap: 10px;
+}
+.site-footer__column-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+}
+.site-footer__input-button {
+   
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 1.25rem;
+    padding: 10px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.footer_background_image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    opacity: 0.3;
+}
+.footer_background_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    
 }

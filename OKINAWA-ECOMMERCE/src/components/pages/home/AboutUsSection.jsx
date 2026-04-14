@@ -8,7 +8,7 @@ import gsap from "gsap";
 export function AboutUsSection() {
   const sectionRef = useRef(null);
   const hasPlayed = useRef(false);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   useEffect(() => {
     if (!isInView || hasPlayed.current) return;
@@ -19,7 +19,7 @@ export function AboutUsSection() {
     gsap.fromTo(
       animationElement,
       { opacity: 0,  },
-      { opacity: 1,  ease: "power2.inOut", duration: 1.2, delay: 0.3 },
+      { opacity: 1,  ease: "power2.inOut", duration: 1.2 },
     );
   }, [isInView]);
 
