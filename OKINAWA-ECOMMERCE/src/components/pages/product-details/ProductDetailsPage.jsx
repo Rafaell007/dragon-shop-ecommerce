@@ -99,6 +99,7 @@ export function ProductDetailsPage() {
           <AlsoLikeSection product={product} />
         </div>
       )}
+     
       <Footer />
     </>
   );

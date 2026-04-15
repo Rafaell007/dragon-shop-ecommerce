@@ -5,7 +5,7 @@ import { ShopByStyle } from "./ShopByStyle.jsx";
 import { ShopByTheme } from "./ShopByTheme.jsx";
 import { AccesoriesSection } from "./AccesoriesSection.jsx";
 import { AboutUsSection } from "./AboutUsSection.jsx";
-import { Footer } from "../../footer/Footer.jsx";
+import { HomeFooter } from "../../footer/HomeFooter.jsx";
 
 export function HomePage() {
   return (
@@ -20,7 +20,7 @@ export function HomePage() {
         <AccesoriesSection />
         <AboutUsSection />
       </main>
-      <Footer />
+      <HomeFooter />
     </>
   );
 }

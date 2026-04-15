@@ -6,10 +6,10 @@ import returnsDragon from "../../assets/images/footer/returns-dragon.webp";
 import footerBackgroundImage from "../../assets/images/footer/background-dragon.webp";
 import { Link } from "react-router";
 import { BsEnvelope} from "react-icons/bs";
-export function Footer() {
-    return (
-        <>
-          <footer className="footer">
+
+export function HomeFooter() {
+  return (
+    <footer id="home-footer">
       <div className="site-footer__content">
         <div className="site-footer__perks">
           <div className="footer-perk">
@@ -113,7 +113,5 @@ export function Footer() {
                 <img src={footerBackgroundImage} alt="Footer background image" />
             </div>
     </footer>
-        
-        </>
-    )
+  );
 }
