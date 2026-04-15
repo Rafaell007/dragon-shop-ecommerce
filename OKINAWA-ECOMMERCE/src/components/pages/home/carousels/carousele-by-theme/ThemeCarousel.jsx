@@ -1,16 +1,17 @@
 import "./ThemeCarousel.css";
+import { Link } from "react-router";
 import animalTheme from '../../../../../assets/images/home/animal-theme.webp';
 import sportTheme from '../../../../../assets/images/home/sport-theme.webp';
 import foodTheme from '../../../../../assets/images/home/food-theme.webp';
-import okiyoeTheme from '../../../../../assets/images/home/okiyoe-theme.webp';
-import cultureTheme from '../../../../../assets/images/home/culture-theme.webp';
+import okiyoeTheme from '../../../../../assets/images/home/electronics-theme.webp';
+import cultureTheme from '../../../../../assets/images/home/jewelery-theme.webp';
 
 const themes = [
-  { src: animalTheme, alt: "animal theme" },
-  { src: sportTheme, alt: "sport theme" },
-  { src: foodTheme, alt: "food theme" },
-  { src: okiyoeTheme, alt: "okiyoe theme" },
-  { src: cultureTheme, alt: "culture theme" },
+  { src: animalTheme, alt: "animal theme", path: "/products/category/groceries" },
+  { src: sportTheme, alt: "sport theme", path: "/products/category/sport-accessories" },
+  { src: foodTheme, alt: "food theme", path: "/products/category/groceries" },
+  { src: okiyoeTheme, alt: "electronics theme", path: "/products/category/electronics" },
+  { src: cultureTheme, alt: "jewelery theme", path: "/products/category/womens-jewellery" },
 ];
 
 const slides = [...themes, ...themes, ...themes, ...themes]; // I duplicate the slides to make the carousel infinite, witout big gaps
@@ -23,12 +24,12 @@ export function ThemeCarousel() {
             {slides.map((theme, index) => (
               <div className="theme-carousel__slide" key={index}>
                 <div className="theme-carousel__thumb">
-                  <img className="theme-carousel__image" src={theme.src} alt={theme.alt} />
+                 <Link to={theme.path}> <img className="theme-carousel__image" src={theme.src} alt={theme.alt} /> </Link>
                 </div>
               </div>
             ))}
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 }

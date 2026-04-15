@@ -46,6 +46,7 @@
     left: 0;
     right: 0;
     color: #fff;
+    text-decoration: none;
     padding: 0.625rem;
     display: flex;
     justify-content: space-between;

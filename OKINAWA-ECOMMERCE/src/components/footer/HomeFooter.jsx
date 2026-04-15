@@ -5,7 +5,7 @@ import secureDragon from "../../assets/images/footer/secure-dragon.webp";
 import returnsDragon from "../../assets/images/footer/returns-dragon.webp";
 import footerBackgroundImage from "../../assets/images/footer/background-dragon.webp";
 import { Link } from "react-router";
-import { BsEnvelope} from "react-icons/bs";
+import { BsEnvelope } from "react-icons/bs";
 
 export function HomeFooter() {
   return (
@@ -54,64 +54,130 @@ export function HomeFooter() {
         <div className="site-footer__nav">
           <div className="site-footer__columns">
             <div className="site-footer__column">
-                <p className="site-footer__column-title">what's dragon-shop?</p>
-                <p className="site-footer__column-description">Dragon-shop is a online store that sells all kind of eccomerce products.</p>
+              <p className="site-footer__column-title">what's dragon-shop?</p>
+              <p className="site-footer__column-description">
+                Dragon-shop is a online store that sells all kind of eccomerce
+                products.
+              </p>
             </div>
             <div className="site-footer__column">
-                <p className="site-footer__column-title">about us</p>
-                <ul>
-                    <li><Link to="">About dragon-shop</Link></li>
-                    <li><Link to="">Contact us</Link></li>
-                    <li><Link to="">Privacy policy</Link></li>
-                    <li><Link to="">Terms of service</Link></li>
-                    <li><Link to="">Blog</Link></li>
-                    <li><Link to="">Affiliate program</Link></li>
-                    <li><Link to="">Careers</Link></li>
-                    <li><Link to="">Press</Link></li>
-                    <li><Link to="">Investors</Link></li>
-                </ul>
+              <p className="site-footer__column-title">about us</p>
+              <ul>
+                <li>
+                  <Link to="">About dragon-shop</Link>
+                </li>
+                <li>
+                  <Link to="">Contact us</Link>
+                </li>
+                <li>
+                  <Link to="">Privacy policy</Link>
+                </li>
+                <li>
+                  <Link to="">Terms of service</Link>
+                </li>
+                <li>
+                  <Link to="">Blog</Link>
+                </li>
+                <li>
+                  <Link to="">Affiliate program</Link>
+                </li>
+                <li>
+                  <Link to="">Careers</Link>
+                </li>
+                <li>
+                  <Link to="">Press</Link>
+                </li>
+                <li>
+                  <Link to="">Investors</Link>
+                </li>
+              </ul>
             </div>
             <div className="site-footer__column">
-                <p className="site-footer__column-title">Help</p>
-                <ul>
-                    <li><Link to="">Contact Us</Link></li>
-                    <li><Link to="">FAQ</Link></li>
-                    <li><Link to="">Shipping</Link></li>
-                    <li><Link to="">Refunds & Returns</Link></li>
-                    <li><Link to="">Size Chart</Link></li>
-                    <li><Link to="">Track My Order</Link></li>
-                </ul>
+              <p className="site-footer__column-title">Help</p>
+              <ul>
+                <li>
+                  <Link to="">Contact Us</Link>
+                </li>
+                <li>
+                  <Link to="">FAQ</Link>
+                </li>
+                <li>
+                  <Link to="">Shipping</Link>
+                </li>
+                <li>
+                  <Link to="">Refunds & Returns</Link>
+                </li>
+                <li>
+                  <Link to="">Size Chart</Link>
+                </li>
+                <li>
+                  <Link to="">Track My Order</Link>
+                </li>
+              </ul>
             </div>
             <div className="site-footer__column">
-                <p className="site-footer__column-title">Explore</p>
-                <ul>
-                    <li><Link to="/products/category/smartphones">New In</Link></li>
-                    <li><Link to="/products/category/groceries">Flash Sale</Link></li>
-                    <li><Link to="/products/category/electronics">Best Seller</Link></li>
-                    <li><Link to="/products/category/women">Women</Link></li>
-                    <li><Link to="/products/category/men">Men</Link></li>
-                    <li><Link to="/products/category/tops">Kids</Link></li>
-                    <li><Link to="/products/category/mens-shirts">T-Shirts</Link></li>
-                    <li><Link to="/products/category/men">Clothing</Link></li>
-                    <li><Link to="/products/category/mobile-accessories">Accessory</Link></li>
-                    <li><Link to="/products/category/home-decoration">Home & Living</Link></li>
-                </ul>
+              <p className="site-footer__column-title">Explore</p>
+              <ul>
+                <li>
+                  <Link to="/products/category/smartphones">New In</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/groceries">Flash Sale</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/electronics">Best Seller</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/women">Women</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/men">Men</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/tops">Kids</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/mens-shirts">T-Shirts</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/men">Clothing</Link>
+                </li>
+                <li>
+                  <Link to="/products/category/mobile-accessories">
+                    Accessory
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/products/category/home-decoration">
+                    Home & Living
+                  </Link>
+                </li>
+              </ul>
             </div>
             <div className="site-footer__column">
-                <p className="site-footer__column-title">Subscribe to our emails</p>
-                <p className="site-footer__column-description">Instantly receive updates, access to exclusive deals, and more.</p>
-                <div className="site-footer__input-wrapper">
-                    <input type="email" placeholder="Enter your email" className="site-footer__column-input" />
-                    <button className="site-footer__input-button"><BsEnvelope /></button>
-                </div>
+              <p className="site-footer__column-title">
+                Subscribe to our emails
+              </p>
+              <p className="site-footer__column-description">
+                Instantly receive updates, access to exclusive deals, and more.
+              </p>
+              <div className="site-footer__input-wrapper">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="site-footer__column-input"
+                />
+                <button className="site-footer__input-button">
+                  <BsEnvelope />
+                </button>
+              </div>
             </div>
           </div>
-          
         </div>
       </div>
       <div className="footer_background_image">
-                <img src={footerBackgroundImage} alt="Footer background image" />
-            </div>
+        <img src={footerBackgroundImage} alt="Footer background image" />
+      </div>
     </footer>
   );
 }

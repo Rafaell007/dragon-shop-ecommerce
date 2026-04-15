@@ -85,7 +85,7 @@ export function HeaderNavMobile() {
                   </ul>
                 </div>
                 <div className="sidebar-nav__wishlist">
-                  <Link className="sidebar-nav__wishlist-link" to="/wishlist" onClick={() => setIsOpen(false)}>
+                  <Link className="sidebar-nav__wishlist-link" to="" onClick={() => setIsOpen(false)}>
                     <BsHeart />
                   </Link>
                   <Link className="sidebar-nav__wishlist-link" to="/wishlist" onClick={() => setIsOpen(false)}>
@@ -100,3 +100,4 @@ export function HeaderNavMobile() {
     </>
   );
 }
+

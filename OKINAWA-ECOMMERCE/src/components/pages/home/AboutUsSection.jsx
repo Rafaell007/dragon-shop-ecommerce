@@ -1,5 +1,5 @@
 import "./AboutUsSection.css";
-import dragonShopLogo from "../../../assets/images/logo/Dragon-Shop-Logo.png";
+import dragonShopLogo from "../../../assets/images/logo/Dragon-Shop-Logo.webp";
 import aboutUsBottomImage from "../../../assets/images/home/about-us/moutain.png";
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "motion/react";

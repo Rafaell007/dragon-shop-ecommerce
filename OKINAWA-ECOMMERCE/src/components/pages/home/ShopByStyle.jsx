@@ -1,10 +1,11 @@
 import "./ShopByStyle.css";
 import shopMen from "../../../assets/images/home/shop-men.webp";
 import shopWomen from "../../../assets/images/home/shop-women.webp";
-import shopKids from "../../../assets/images/home/shop-kids.webp";
+import shopKids from "../../../assets/images/home/shop-kid.webp";
 import { BsArrowRight } from "react-icons/bs";
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "motion/react";
+import { Link } from "react-router";
 import gsap from "gsap";
 
 export function ShopByStyle() {
@@ -38,24 +39,24 @@ export function ShopByStyle() {
       <div className="shop-style__grid">
         <div className="shop-style__card">
           <img className="shop-style__image" src={shopMen} alt="shop men" />
-          <div className="shop-style__label"> 
+          <Link to="/products/category/men" className="shop-style__label">
             <p className="shop-style__label-text">Men</p>
             <BsArrowRight className="shop-style__label-icon" />
-          </div>
+          </Link>
         </div>
         <div className="shop-style__card">
           <img className="shop-style__image" src={shopWomen} alt="shop women" />
-          <div className="shop-style__label">
+          <Link to="/products/category/women" className="shop-style__label">
             <p className="shop-style__label-text">Women</p>
             <BsArrowRight className="shop-style__label-icon" />
-          </div>
+          </Link>
         </div>
         <div className="shop-style__card">
           <img className="shop-style__image" src={shopKids} alt="shop kids" />
-          <div className="shop-style__label">
+          <Link to="/products/category/tops" className="shop-style__label">
             <p className="shop-style__label-text">Kids</p>
             <BsArrowRight className="shop-style__label-icon" />
-          </div>
+          </Link>
         </div>
       </div>
     </div>

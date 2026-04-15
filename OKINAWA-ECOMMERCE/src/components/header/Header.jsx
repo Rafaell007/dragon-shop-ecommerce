@@ -1,7 +1,7 @@
 import {HeaderNavigation} from "./HeaderNavigation.jsx";
 import {HeaderActions} from "./HeaderActions.jsx";
 import "./Header.css";
-import okinawaLogo from "../../assets/images/header/okinawa-logo.webp";
+import LogoDragon from "../../assets/images/logo/Dragon-Shop-Logo.webp";
 import { HeaderNavMobile } from "./HeaderNavMobile.jsx";
 import { useCart } from "../../context/CartContext";
 import { useEffect, useState, useRef } from "react";
@@ -38,7 +38,7 @@ export function Header() {
             <div className="site-header__bar" ref={headerRef}>
                 <HeaderNavMobile />
                 <div className="site-header__logo" >
-                   <Link to="/"> <img src={okinawaLogo} alt="okinawa logo" /> </Link> 
+                   <Link to="/"> <img src={LogoDragon} alt="Dragon Shop Logo" /> </Link> 
                 </div>
                 <HeaderNavigation />
                 <HeaderActions cartProducts = {cartProducts} />
@@ -52,7 +52,7 @@ export function Header() {
                     >
                     <HeaderNavMobile />
                     <div className="site-header__logo" >
-                       <Link to="/"> <img src={okinawaLogo} alt="okinawa logo" /> </Link> 
+                       <Link to="/"> <img src={LogoDragon} alt="Dragon Shop Logo" /> </Link> 
                     </div>
           <HeaderNavigation />
           <HeaderActions cartProducts={cartProducts} />
