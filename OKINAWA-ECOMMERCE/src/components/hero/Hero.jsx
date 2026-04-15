@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "./Hero.css";
 import heroBanner from "../../assets/images/hero/hero_background-image.webp";
+import { Link } from "react-router";
 
 gsap.registerPlugin(useGSAP);
 
@@ -61,9 +62,11 @@ export function Hero() {
       <div ref={heroRef} id="hero" className="hero">
         <img className="hero__image" src={heroBanner} alt="" />
         <div className="hero__cta-wrap">
+          <Link to="/products">
           <button type="button" className="hero__cta-button">
             shop now
           </button>
+          </Link>
         </div>
         <div id="cursor" className="hero__cursor" aria-hidden />
       </div>
