@@ -82,15 +82,15 @@ npm run preview
 
 ### Cart Management
 
-![Cart Management](https://i.imgur.com/scH7B8Z.gif)
+![Cart Management](https://i.imgur.com/jRj7vii.gif)
 
 ### Product Details
 
-![Product Details](https://i.imgur.com/7W17jkU.gif)
+![Product Details](https://i.imgur.com/scH7B8Z.gif)
 
 ### Category Filtering
 
-![Category Filtering](https://i.imgur.com/jRj7vii.gif)
+![Category Filtering](https://i.imgur.com/7W17jkU.gif)
 
 ---
 
