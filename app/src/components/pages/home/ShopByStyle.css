@@ -6,8 +6,6 @@
 
 .shop-style__header {
     margin-bottom: 1.25rem;
-    opacity: 0;
-    transform: translateX(-100px);
 }
 .shop-style__title {
     font-size: 3rem;

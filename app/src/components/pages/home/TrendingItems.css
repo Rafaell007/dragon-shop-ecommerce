@@ -10,6 +10,7 @@
     padding: 1.25rem 1.875rem;
     max-width: 1600px;
     margin: 0 auto;
+    min-height: 500px;
 }
 
 .trending__title {
