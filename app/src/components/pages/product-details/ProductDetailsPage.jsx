@@ -100,7 +100,7 @@ export function ProductDetailsPage() {
         </div>
       )}
      
-      <Footer />
+      <Footer footerType="footer" />
     </>
   );
 }
