@@ -14,6 +14,9 @@ const DUMMYJSON_PRODUCTS = "https://dummyjson.com/products";
 
 
 export function ProductsPage() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const { categorySlug } = useParams();
   const [products, setProducts] = useState([]);
   const [visibleCount, setVisibleCount] = useState(12);
@@ -22,7 +25,10 @@ export function ProductsPage() {
     let cancelled = false;
 
     const loadProducts = async () => {
-      const response = await axios.get(DUMMYJSON_PRODUCTS, {
+       setLoading(true);
+       setError(null)
+       try {
+         const response = await axios.get(DUMMYJSON_PRODUCTS, {
         params: { limit: 200 },
       });
       const list = Array.isArray(response.data.products)
@@ -37,8 +43,14 @@ export function ProductsPage() {
       if (!cancelled) {
         setProducts(filtered);
       }
-    };
+    } catch {
+      if (!cancelled) setError(" Failed to load products, Please try again.");
 
+    } finally {
+      if (!cancelled) setLoading(false);
+    }
+       }
+     
     loadProducts();
 
     return () => {
@@ -48,30 +60,38 @@ export function ProductsPage() {
 
   const displayedProducts = products.slice(0, visibleCount );
   const hasMore = visibleCount < products.length;
-
   const pageTitle = getCategoryPageTitle(categorySlug);
 
   return (
     <>
       <Header />
+      
       <div className="products-page">
       <p className="products-page__counter">{displayedProducts.length} / {products.length} items</p>
         <div className="products-page__head">
           <h1 className="products-page__title">{pageTitle}</h1>
         </div>
+      {loading && <p className="products-page__status" >Loading...</p>}
+      {!loading && error && (
+        <p className="product-page__status products-page__status--error" role="alert">{error}</p>
+      )}
+      {!loading && !error && (
+        <>
         <ProductsGrid products={displayedProducts} />
         {hasMore && (
           <div className="products-page__load-more">
             <button
             type="button"
-            onClick={ ()=> setVisibleCount(prev => prev + 12) }
+            onClick={()=> setVisibleCount(prev => prev + 12) }
             className="products-page__load-more-btn"
-
             >
               LOAD MORE
             </button>
           </div>
         )}
+        </>
+      )}
+        
       </div>
     </>
   );
