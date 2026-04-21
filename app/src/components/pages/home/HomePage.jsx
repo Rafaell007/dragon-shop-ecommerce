@@ -8,12 +8,10 @@ import { AboutUsSection } from "./AboutUsSection.jsx";
 import { Footer } from "../../footer/Footer.jsx";
 
 export function HomePage() {
- 
   return (
     <>
-      
-        <Header />
-        <main className="page-content">
+      <Header />
+      <main className="page-content">
         <Hero />
         <TrendingItems />
         <ShopByStyle />
@@ -21,7 +19,7 @@ export function HomePage() {
         <AccesoriesSection />
         <AboutUsSection />
       </main>
-      <Footer footerType= "home-footer" />
+      <Footer footerType="home-footer" />
     </>
   );
 }

@@ -1,8 +1,9 @@
 import { createContext, useContext, useState, useEffect, useMemo } from "react";
-import initialCart from "../data/mockCart.json";
+
 
 const CartContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useCart() {
   return useContext(CartContext);
 }
@@ -13,9 +14,9 @@ export function CartProvider({ children }) {
   const [cartProducts, setCartProducts] = useState(() => {
     try {
       const storedCart = localStorage.getItem("cart");
-      return storedCart ? JSON.parse(storedCart) : initialCart;
+      return storedCart ? JSON.parse(storedCart) : [];
     } catch {
-      return initialCart;
+      return [];
     }
   });
 
@@ -25,10 +26,7 @@ export function CartProvider({ children }) {
 
   function addToCart(product) {
     const existingProduct = cartProducts.find(
-      (item) =>
-        item.id === product.id &&
-        item.color === product.color &&
-        item.size === product.size,
+      (item) => item.id === product.id
     );
 
     const addQuantity = Math.max(1, Number(product.quantity) || 1);
@@ -57,10 +55,7 @@ export function CartProvider({ children }) {
 
   function removeFromCart(product) {
     const existingProduct = cartProducts.find(
-      (item) =>
-        item.id === product.id &&
-        item.color === product.color &&
-        item.size === product.size,
+      (item) => item.id === product.id
     );
 
     if (existingProduct && existingProduct.quantity > 1) {
