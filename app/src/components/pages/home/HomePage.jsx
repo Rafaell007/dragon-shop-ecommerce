@@ -3,7 +3,7 @@ import { Hero } from "../../hero/Hero.jsx";
 import { TrendingItems } from "./TrendingItems.jsx";
 import { ShopByStyle } from "./ShopByStyle.jsx";
 import { ShopByTheme } from "./ShopByTheme.jsx";
-import { AccesoriesSection } from "./AccesoriesSection.jsx";
+import { AccesoriesSection } from "./AccessoriesSection.jsx";
 import { AboutUsSection } from "./AboutUsSection.jsx";
 import { Footer } from "../../footer/Footer.jsx";
 

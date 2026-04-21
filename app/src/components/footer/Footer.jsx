@@ -56,7 +56,7 @@ export function Footer({footerType}) {
               <div className="site-footer__column">
                 <p className="site-footer__column-title">what's dragon-shop?</p>
                 <p className="site-footer__column-description">
-                  Dragon-shop is a online store that sells all kind of eccomerce
+                  Dragon-shop is a online store that sells all kind of e-commerce
                   products.
                 </p>
               </div>

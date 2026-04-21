@@ -1,5 +1,5 @@
 import "./ShopByTheme.css";
-import { ThemeCarousel } from "./carousels/carousele-by-theme/ThemeCarousel.jsx";
+import { ThemeCarousel } from "./carousels/carousel-by-theme/ThemeCarousel.jsx";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { motion,useInView } from "motion/react";

@@ -27,7 +27,7 @@ export function Product({ product }) {
     <div className="product-card">
       <div className="product-card__media">
         <Link className="product-card__image-link" to={`/product/${product.id}`}>
-        <img className="product-card__image" src={imageSrc} alt="" />
+        <img className="product-card__image" src={imageSrc} alt={title} />
         </Link>
         <button
           type="button"

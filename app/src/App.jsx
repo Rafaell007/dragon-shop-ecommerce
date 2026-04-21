@@ -4,7 +4,7 @@ import "./App.css";
 import { HomePage } from "./components/pages/home/HomePage";
 import { ProductsPage } from "./components/pages/products/ProductsPage.jsx";
 import { CartProvider } from "./context/CartContext";
-import { ProductDetailsPage } from "./components/pages/product-details/ProductDetailsPage.jsx";
+import { ProductDetailsPage } from "./components/pages/products/product-details/ProductDetailsPage.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

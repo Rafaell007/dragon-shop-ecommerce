@@ -1,16 +1,16 @@
 import "./ProductDetailsPage.css";
-import { Header } from "../../header/Header";
+import { Header } from "../../../header/Header";
 import { useParams } from "react-router";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import freeShippingBanner from "../../../assets/images/product-details/free-shipping.webp";
+import freeShippingBanner from "../../../../assets/images/product-details/free-shipping.webp";
 import { ProductImage } from "./ProductImage";
 import { QuantitySection } from "./QuantitySection";
 import { MemberBenefitsSection } from "./MemberBenefitsSection";
 import { PaymentMethods } from "./PaymentMethods";
 import { CommentsSection } from "./CommentsSection";
 import { AlsoLikeSection } from "./AlsoLikeSection";
-import { Footer } from "../../footer/Footer";
+import { Footer } from "../../../footer/Footer";
 
 
 export function ProductDetailsPage() {

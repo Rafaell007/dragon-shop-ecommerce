@@ -23,7 +23,7 @@ export function ProductQuantityChanger({ cartProduct }) {
                     <button
                       type="button"
                       className="mini-cart__qty-btn"
-                      onClick={() => addToCart(cartProduct)}
+                      onClick={() => addToCart({...cartProduct, quantity: 1})}
                     >
                       +
                     </button>

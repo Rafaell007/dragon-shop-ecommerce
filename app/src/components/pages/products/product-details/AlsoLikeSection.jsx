@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Carousel } from "../../carousel/Carousel.jsx";
-import { Product } from "../home/Product";
+import { Carousel } from "../../../carousel/Carousel.jsx";
+import { Product } from "../Product";
 import axios from "axios";
 
 

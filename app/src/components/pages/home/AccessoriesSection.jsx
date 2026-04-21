@@ -1,4 +1,4 @@
-import "./AccesoriesSection.css";
+import "./AccessoriesSection.css";
 import accessoriesHeroImage from "../../../assets/images/home/accesories/accesories-hero-image.webp";
 import blackDragonCapImage from "../../../assets/images/home/accesories/black-dragon-cap.png";
 import catRamenPillowImage from "../../../assets/images/home/accesories/cat-ramen-pillow.webp";

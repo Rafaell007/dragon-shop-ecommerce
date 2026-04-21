@@ -3,14 +3,10 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import axios from "axios";
 import { Carousel } from "../../carousel/Carousel.jsx";
 import { ScrollBar, useScrollBar } from "../../carousel/ScrollBar.jsx";
-import { Product } from "./Product";
+import { Product } from "../products/Product.jsx";
 import { GsapTextAnimation } from "./gsapAnimations/TrendingItemsGsap.jsx";
 
 const PRODUCTS_URL = "https://dummyjson.com/products";
-const MEN_CATEGORIES = ["mens-watches", "mens-shirts", "mens-shoes"];
-
-
-
 
 export function TrendingItems() {
   const containerRef = useRef(null);

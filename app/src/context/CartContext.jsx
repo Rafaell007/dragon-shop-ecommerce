@@ -35,7 +35,7 @@ export function CartProvider({ children }) {
       setCartProducts((prevProducts) => {
         return prevProducts.map((item) => {
           return item === existingProduct
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + addQuantity }
             : item;
         });
       });

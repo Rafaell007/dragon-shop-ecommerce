@@ -1,6 +1,6 @@
-import PayPalLogo from "../../../assets/images/checkout/PayPal.svg";
-import ApplePayLogo from "../../../assets/images/checkout/ApplePay.svg";
-import { useCart } from "../../../context/CartContext";
+import PayPalLogo from "../../../../assets/images/checkout/PayPal.svg";
+import ApplePayLogo from "../../../../assets/images/checkout/ApplePay.svg";
+import { useCart } from "../../../../context/CartContext";
 
 export function PaymentMethods({product, quantity}) {
   const { addToCart, setIsCartOpen } = useCart();

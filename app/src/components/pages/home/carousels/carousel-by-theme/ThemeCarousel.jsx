@@ -8,13 +8,13 @@ import cultureTheme from '../../../../../assets/images/home/jewelery-theme.webp'
 
 const themes = [
   { src: animalTheme, alt: "animal theme", path: "/products/category/groceries" },
-  { src: sportTheme, alt: "sport theme", path: "/products/category/sport-accessories" },
+  { src: sportTheme, alt: "sport theme", path: "/products/category/sports-accessories" },
   { src: foodTheme, alt: "food theme", path: "/products/category/groceries" },
   { src: okiyoeTheme, alt: "electronics theme", path: "/products/category/electronics" },
   { src: cultureTheme, alt: "jewelery theme", path: "/products/category/womens-jewellery" },
 ];
 
-const slides = [...themes, ...themes, ...themes, ...themes]; // I duplicate the slides to make the carousel infinite, witout big gaps
+const slides = [...themes, ...themes, ...themes, ...themes]; // I duplicate the slides to make the carousel infinite, witout gaps
 
 export function ThemeCarousel() {
   return (
