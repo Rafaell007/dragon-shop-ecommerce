@@ -1,6 +1,7 @@
 import { BsSearch, BsHeart, BsPerson } from "react-icons/bs";
 import "./HeaderActions.css";
 import { CheckoutCartButton } from "../pages/checkout/Checkout.jsx";
+import { Link } from "react-router";
 
 export function HeaderActions({ cartProducts }) {
 
@@ -10,7 +11,7 @@ export function HeaderActions({ cartProducts }) {
       <div className="header-actions">
         <div className="header-actions__search">
           <a className="header-actions__icon-link" href="">
-            <BsSearch />
+          <Link to="/products" state={{ focusSearch: true }}> <BsSearch /></Link>
           </a>
         </div>
         <div className="header-actions__wishlist">
