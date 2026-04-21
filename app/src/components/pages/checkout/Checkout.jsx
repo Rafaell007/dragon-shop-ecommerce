@@ -19,12 +19,8 @@ export function CheckoutCartButton({ cartProducts }) {
       : (document.body.style.overflow = "");
   }, [isOpen]);
 
-  let totalQuantity = 0;
+  let totalQuantity = cartProducts.length;
   
-
-  cartProducts.forEach((cartItem) => {
-    totalQuantity += cartItem.quantity;
-  });
 
   
 
