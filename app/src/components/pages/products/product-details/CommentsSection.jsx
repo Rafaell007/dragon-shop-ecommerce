@@ -1,21 +1,34 @@
 import "./CommentsSection.css";
 
-import Rating from "react-rating";
-
 import { BsStar, BsStarFill, BsChevronDown } from "react-icons/bs";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { motion } from "motion/react";
+
+function StarRating({ rating }) {
+  const rounded = Math.round(rating);
+  return Array.from({ length: 5 }, (_, i) =>
+    i < rounded ? (
+      <BsStarFill
+        key={i}
+        className="product-reviews__star product-reviews__star--full"
+        aria-hidden
+      />
+    ) : (
+      <BsStar
+        key={i}
+        className="product-reviews__star product-reviews__star--empty"
+        aria-hidden
+      />
+    ),
+  );
+}
 
 export function CommentsSection({ reviews, productId }) {
   const [visibleCount, setVisibleCount] = useState(1);
 
   const displayedReviews = reviews.slice(0, visibleCount);
-
-  useEffect(() => {
-    setVisibleCount(1);
-  }, [productId]);
 
   const canShowMore = visibleCount < reviews.length;
 
@@ -57,22 +70,7 @@ export function CommentsSection({ reviews, productId }) {
               role="img"
               aria-label={`Rating ${review.rating} out of 5`}
             >
-              <Rating
-                initialRating={review.rating}
-                readonly
-                emptySymbol={
-                  <BsStar
-                    className="product-reviews__star product-reviews__star--empty"
-                    aria-hidden
-                  />
-                }
-                fullSymbol={
-                  <BsStarFill
-                    className="product-reviews__star product-reviews__star--full"
-                    aria-hidden
-                  />
-                }
-              />
+              <StarRating rating={review.rating} />
             </div>
           </motion.div>
         ))}

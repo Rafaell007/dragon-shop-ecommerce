@@ -8,6 +8,7 @@ import {
 } from "../../../constants/platziCategories";
 import { Header } from "../../header/Header";
 import { ProductsGrid } from "../home/ProductsGrid";
+import { LoadingIndicator } from "../../loading-indicator/LoadingIndicator";
 import "./ProductsPage.css";
 
 const DUMMYJSON_PRODUCTS = "https://dummyjson.com/products";
@@ -83,7 +84,7 @@ export function ProductsPage() {
             setSearchQuery={setSearchQuery}
           />
         </div>
-        {loading && <p className="products-page__status">Loading...</p>}
+        {loading && <LoadingIndicator label="Loading products…" />}
         {!loading && error && (
           <p
             className="product-page__status products-page__status--error"

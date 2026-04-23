@@ -11,6 +11,7 @@ import { PaymentMethods } from "./PaymentMethods";
 import { CommentsSection } from "./CommentsSection";
 import { AlsoLikeSection } from "./AlsoLikeSection";
 import { Footer } from "../../../footer/Footer";
+import { LoadingIndicator } from "../../../loading-indicator/LoadingIndicator";
 
 
 export function ProductDetailsPage() {
@@ -68,9 +69,10 @@ export function ProductDetailsPage() {
   return (
     <>
       <Header />
-      {loading && <p>Loading...</p>}
+      {loading && <LoadingIndicator label="Loading product…" />}
       {!loading && error && <p role="alert">{error}</p>}
       {!loading && !error && product && (
+        <>
         <div className="product-detail">
           <div className="product-detail__main">
             <ProductImage key={product.id} product={product} />
@@ -95,12 +97,14 @@ export function ProductDetailsPage() {
                 <p className="product-detail__description-label">Description:</p>
                 <p className="product-detail__description-text">{product.description}</p>
               </div>
-          <CommentsSection reviews={reviews} productId={product.id} />
+          <CommentsSection key={product.id} reviews={reviews} productId={product.id} />
           <AlsoLikeSection product={product} />
         </div>
+        <Footer footerType="footer" />
+        </>
       )}
      
-      <Footer footerType="footer" />
+     
     </>
   );
 }
