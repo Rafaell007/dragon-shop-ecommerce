@@ -61,7 +61,11 @@
     font-size: 14px;
 }
 
-.main-nav__item--has-dropdown:hover .main-nav__dropdown{
+.main-nav--scroll-up .main-nav__dropdown {
+    display: none !important;
+}
+
+.main-nav--scroll-down .main-nav__item--has-dropdown:hover .main-nav__dropdown {
     display: block;
 }
 

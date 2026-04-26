@@ -12,7 +12,7 @@ import { useCart } from "../../../context/CartContext";
 
 export function CheckoutCartButton({ cartProducts }) {
   const { isCartOpen: isOpen, setIsCartOpen: setIsOpen } = useCart();
-  
+
   useEffect(() => {
     isOpen
       ? (document.body.style.overflow = "hidden")
@@ -20,9 +20,6 @@ export function CheckoutCartButton({ cartProducts }) {
   }, [isOpen]);
 
   let totalQuantity = cartProducts.length;
-  
-
-  
 
   return (
     <>
@@ -55,7 +52,7 @@ export function CheckoutCartButton({ cartProducts }) {
             >
                <CartHeaderContent setIsOpen={setIsOpen} />
               <div className="mini-cart__body">
-               
+
                 <CartProductsList cartProducts={cartProducts} setIsOpen={setIsOpen} />
               </div>
               <CartPaymentSummary />

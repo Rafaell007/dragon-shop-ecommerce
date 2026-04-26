@@ -2,9 +2,13 @@ import { Link } from "react-router";
 import "./HeaderNavigation.css";
 import { NAV_CATEGORY_GROUPS } from "../../constants/platziCategories";
 
-export function HeaderNavigation() {
+export function HeaderNavigation({ isScrollingDown = true }) {
+  const scrollModifier = isScrollingDown
+    ? "main-nav--scroll-down"
+    : "main-nav--scroll-up";
+
   return (
-    <nav className="main-nav">
+    <nav className={`main-nav ${scrollModifier}`}>
       <ul className="main-nav__list">
         <li className="main-nav__item">
           <Link className="main-nav__link" to="/products">All products</Link>
