@@ -10,9 +10,9 @@ export function HeaderActions({ cartProducts }) {
     <>
       <div className="header-actions">
         <div className="header-actions__search">
-          <a className="header-actions__icon-link" href="">
-          <Link to="/products" state={{ focusSearch: true }}> <BsSearch /></Link>
-          </a>
+          <Link className="header-actions__icon-link" to="/products" state={{ focusSearch: true }}>
+            <BsSearch />
+          </Link>
         </div>
         <div className="header-actions__wishlist">
           <a className="header-actions__icon-link" href="">
