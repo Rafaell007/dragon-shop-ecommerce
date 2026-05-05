@@ -5,6 +5,7 @@ import { HomePage } from "./components/pages/home/HomePage";
 import { ProductsPage } from "./components/pages/products/ProductsPage.jsx";
 import { CartProvider } from "./context/CartContext";
 import { ProductDetailsPage } from "./components/pages/products/product-details/ProductDetailsPage.jsx";
+import { NotFoundPage } from "./components/pages/not-found-page/NotFoundPage.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/products/category/:categorySlug" element={<ProductsPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/product/:productId" element={<ProductDetailsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </CartProvider>
   );
